@@ -86,6 +86,7 @@ const DropdownBody = dropdownBodyEnhancer(
         this.componentRef = element;
       };
     }
+
   static zIndex = Z_INDEX.DROPDOWN;
 
   static defaultProps = {
@@ -102,11 +103,6 @@ const DropdownBody = dropdownBodyEnhancer(
     closeOnClickOutside: true,
   }
 
-  // handleClickOutside = () => {
-  //   const { closeOnClickOutside, dropdown: { closeDropdown }} = this.props;
-
-  //   closeOnClickOutside && closeDropdown && closeDropdown();
-  // }
   handleOutsideClick = (e) => {
     if ((this.componentRef && this.componentRef.contains(e.target)) || !this.props.isOpen) {
       return;

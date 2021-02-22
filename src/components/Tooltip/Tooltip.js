@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
 import { Manager, Popper, Reference } from 'react-popper';
-// import onClickOutside from 'react-onclickoutside';
 import { Portal } from 'react-portal';
-
 import { TooltipTargetTag, TooltipMessageTag, TooltipArrowTag } from './Tooltip.theme';
 
 
@@ -40,9 +38,6 @@ type TooltipState = {
   isOpen: boolean,
 }
 
-// const Tooltip: React$ComponentType<TooltipProps> = onClickOutside(
-
-// );
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
 
   static defaultProps = {
@@ -55,12 +50,13 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
 
   constructor(props: TooltipProps) {
     super(props);
-    // this.componentRef = React.createRef();
+
     this.componentRef = null;
 
     this.setComponentRef = element => {
       this.componentRef = element;
     };
+
     this.state = {
       isOpen: props.defaultOpen || false,
     };
@@ -86,10 +82,6 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     document.removeEventListener('click', this.handleOutsideClick);
 
   }
-  // handleClickOutside = (event: *) => {
-  //   this.closeTooltip();
-  //   event.stopPropagation();
-  // };
 
   renderTooltipMessage = () => {
     const { placement, withPortal, message, eventsEnabled, modifiers, ...rest } = this.props;
