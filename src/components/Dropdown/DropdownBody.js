@@ -104,21 +104,21 @@ const DropdownBody = dropdownBodyEnhancer(
   }
 
   handleOutsideClick = (e) => {
-    if ((this.componentRef && this.componentRef.contains(e.target)) || !this.props.isOpen) {
+    if ((this.componentRef && this.componentRef.contains(e.target))) {
       return;
     }
     const { closeOnClickOutside, dropdown: { closeDropdown }} = this.props;
 
-    closeOnClickOutside && closeDropdown && closeDropdown();
-    e.stopPropagation();
+    closeOnClickOutside && closeDropdown && this.props.dropdown.isOpen && closeDropdown();
+
   }
 
   componentDidMount = () => {
 
-    document.addEventListener('mousedown', this.handleOutsideClick);
+    document.addEventListener('click', this.handleOutsideClick);
   }
   componentWillUnmount = () => {
-    document.removeEventListener('mousedown', this.handleOutsideClick);
+    document.removeEventListener('click', this.handleOutsideClick);
 
   }
   getPopperPlacement = () => {

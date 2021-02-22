@@ -71,7 +71,6 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       return;
     }
     this.closeTooltip();
-    e.stopPropagation();
   }
 
   componentDidMount = () => {
