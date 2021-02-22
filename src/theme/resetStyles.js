@@ -53,7 +53,7 @@ const resetStyles = ({ FONTS }: *) => css`
   }
   blockquote:before, blockquote:after,
   q:before, q:after {
-    content: '';
+    content: "";
     content: none;
   }
   table {
