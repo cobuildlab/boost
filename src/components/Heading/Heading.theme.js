@@ -26,6 +26,23 @@ const [HeadingTag, theme] = createThemeTag(name, ({ FONTS }: *) => ({
         ...FONTS.H5,
       },
     },
+    weight: {
+      light: {
+        fontWeight: 300,
+      },
+      normal: {
+        fontWeight: 400,
+      },
+      medium: {
+        fontWeight: 500,
+      },
+      semibold: {
+        fontWeight: 600,
+      },
+      bold: {
+        fontWeight: 700,
+      },
+    },
     ellipsis: {
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
