@@ -220,7 +220,7 @@ declare module "@cobuildlab/boost" {
     props: DividerProps,
   ): React.ComponentElement<DividerProps>;
 
-  interface GridLayoutProps extends TagProps {
+  export interface GridLayoutProps extends TagProps {
     children?: React.ReactNode;
     /* When true then stretch to full width */
     stretch?: boolean;
@@ -259,7 +259,8 @@ declare module "@cobuildlab/boost" {
     props: GridLayoutProps,
   ): React.ComponentElement<GridLayoutProps>;
 
-  interface GridBoxProps extends TagProps {
+  export interface GridBoxProps extends TagProps {
+    area?: string;
     children?: React.ReactNode;
     /* Grid-box direction */
     direction?: 'column' | 'row';
@@ -955,7 +956,8 @@ declare module "@cobuildlab/boost" {
   export function Code(props: CodeProps): React.ComponentElement<CodeProps>;
 
   type DateInputProps = {
-    onChange: (value?: string) => void;
+    onChange?: (value: string) => void;
+    onBlur?: (event?: React.SyntheticEvent) => void;
     value?: string;
     withTime?: boolean;
     withPortal?: boolean;
