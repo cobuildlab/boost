@@ -220,7 +220,7 @@ declare module '@cobuildlab/boost' {
     props: DividerProps,
   ): React.ComponentElement<DividerProps>;
 
-  interface GridLayoutProps extends TagProps {
+  export interface GridLayoutProps extends TagProps {
     children?: React.ReactNode;
     /** When true then stretch to full width */
     stretch?: boolean;
@@ -259,7 +259,7 @@ declare module '@cobuildlab/boost' {
     props: GridLayoutProps,
   ): React.ComponentElement<GridLayoutProps>;
 
-  interface GridBoxProps extends TagProps {
+  export interface GridBoxProps extends TagProps {
     children?: React.ReactNode;
     /** Grid-box direction */
     direction?: 'column' | 'row';
@@ -316,6 +316,7 @@ declare module '@cobuildlab/boost' {
       | 'flex-start';
     /** Text-align css rule */
     textAlign?: 'left' | 'right' | 'center' | 'justify';
+    area?: string;
   }
 
   function BoxLayout(props: GridBoxProps): React.ComponentElement<GridBoxProps>;
