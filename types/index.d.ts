@@ -1,12 +1,12 @@
-declare module '@cobuildlab/boost' {
-  import React from 'react';
-  
+declare module "@cobuildlab/boost" {
+  import React, { PureComponent } from 'react';
+
   type TagProps = {
     activeClassName?: string;
     children?: React.ReactNode;
     className?: string;
     cols?: number | string;
-    component?: string | React.ReactComponentElement<any>;
+    component?: string | React.ReactComponentElement;
     exact?: boolean;
     stretch?: boolean;
     for?: string;
@@ -26,20 +26,19 @@ declare module '@cobuildlab/boost' {
     onKeyDown?: (event?: React.SyntheticEvent) => void;
     onSubmit?: () => void;
     onScroll?: () => void;
-    options?: Array<Record<string, any>>;
+    options?: Array<Record<string, unknown>>;
     placeholder?: string;
     rows?: number | string;
     src?: string;
-    style?: any;
+    style?: unknown;
     to?: string;
     type?: string;
     value?: number | string | boolean;
-    insideRef?: any;
-    modifiers?: any;
+    insideRef?: unknown;
+    modifiers?: unknown;
   };
 
-  export class Tag extends React.PureComponent<TagProps> {
-  }
+  export class Tag extends React.PureComponent<TagProps> {}
 
   export type PropSizes =
     | 'noSet'
@@ -55,14 +54,14 @@ declare module '@cobuildlab/boost' {
 
   interface PaperProps extends TagProps {
     children?: React.ReactNode;
-    /** Possible padding */
+    /* Possible padding */
     padding?: PropSizes | 'xxl';
-    /** When true then stetch container to the parent */
+    /* When true then stetch container to the parent */
     stretch?: boolean;
-    /** Modifier to regulate border radius */
+    /* Modifier to regulate border radius */
     borderRadius?: 'top' | 'bottom' | 'all';
-    /** Custom styles */
-    style?: Record<string, any>;
+    /* Custom styles */
+    style?: Record<string, unknown>;
   }
 
   export function Paper(props: PaperProps): React.ComponentElement<PaperProps>;
@@ -82,6 +81,7 @@ declare module '@cobuildlab/boost' {
     offsetRight?: PropSizes;
     cursor?: 'pointer' | 'default' | 'inherit';
     stretch?: boolean;
+    selected?: boolean;
     grow?: boolean;
     growChildren?: boolean;
     onClick?: ((event: MouseEvent) => void) | (() => void);
@@ -106,23 +106,23 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<FlexLayoutCommonProps>;
 
   export interface TextProps extends TagProps {
-    /** Text to display in the component */
+    /* Text to display in the component */
     children?: React.ReactNode | string | number;
-    /** Another way to set displayed text */
+    /* Another way to set displayed text */
     text?: string | number;
-    /** Possible text colors */
-    color?: any;
-    /** Disabled text state */
+    /* Possible text colors */
+    color?: unknown;
+    /* Disabled text state */
     disabled?: boolean;
-    /** Set style to bold or other weights */
+    /* Set style to bold or other weights */
     weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
-    /** Text align */
+    /* Text align */
     align?: 'left' | 'center' | 'right';
-    /** When true then cut text with ellipsis */
+    /* When true then cut text with ellipsis */
     ellipsis?: boolean;
-    /** Possible types of the css cursor property */
+    /* Possible types of the css cursor property */
     cursor?: 'pointer' | 'default' | 'auto';
-    /** Modern text kinds */
+    /* Modern text kinds */
     kind?:
       | 'overline-2'
       | 'overline-1'
@@ -135,20 +135,20 @@ declare module '@cobuildlab/boost' {
   export function Text(props: TextProps): React.ComponentElement<TextProps>;
 
   interface IconProps extends TagProps {
-    /** Icon name */
+    /* Icon name */
     name?: string;
-    /** Icon color */
-    color?: any;
-    /** Icon size */
+    /* Icon color */
+    color?: unknown;
+    /* Icon size */
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'stretch';
-    /** Custom icon class */
+    /* Custom icon class */
     className?: string;
-    /** Title attribute for the icon */
+    /* Title attribute for the icon */
     title?: string;
-    /** Possible types of the css cursor property */
+    /* Possible types of the css cursor property */
     cursor?: 'pointer' | 'default' | 'auto';
     //* * allow pass props to an Icon */
-    children?: (Glyph: any) => React.ReactNode;
+    children?: (Glyph: unknown) => React.ReactNode;
   }
 
   export function Icon(props: IconProps): React.ComponentElement<IconProps>;
@@ -158,7 +158,7 @@ declare module '@cobuildlab/boost' {
       | React.ReactNode
       | ((data: Record<string, unknown>) => React.ReactNode);
     paddingOuter?: PropSizes;
-    style?: Record<string, any>;
+    style?: Record<string, unknown>;
     stretch?: boolean;
     borderRadius?: 'top' | 'bottom' | 'all';
   }
@@ -220,17 +220,17 @@ declare module '@cobuildlab/boost' {
     props: DividerProps,
   ): React.ComponentElement<DividerProps>;
 
-  export interface GridLayoutProps extends TagProps {
+  interface GridLayoutProps extends TagProps {
     children?: React.ReactNode;
-    /** When true then stretch to full width */
+    /* When true then stretch to full width */
     stretch?: boolean;
-    /** Possbile spaces between grid items */
+    /* Possbile spaces between grid items */
     gap?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'none';
-    /** When true then set inline-grid */
+    /* When true then set inline-grid */
     inline?: boolean;
-    /** Possible paddings of the grid layout */
+    /* Possible paddings of the grid layout */
     padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
-    /** Justify-content css rule */
+    /* Justify-content css rule */
     justifyContent?:
       | 'start'
       | 'end'
@@ -239,7 +239,7 @@ declare module '@cobuildlab/boost' {
       | 'space-around'
       | 'space-between'
       | 'space-evenly';
-    /** Align-content css rule */
+    /* Align-content css rule */
     alignContent?:
       | 'start'
       | 'end'
@@ -248,9 +248,9 @@ declare module '@cobuildlab/boost' {
       | 'space-around'
       | 'space-between'
       | 'space-evenly';
-    /** Justify-items css rule */
+    /* Justify-items css rule */
     justifyItems?: 'start' | 'end' | 'center' | 'stretch';
-    /** Align-items css rule */
+    /* Align-items css rule */
     alignItems?: 'start' | 'end' | 'center' | 'stretch';
     columns?: string;
   }
@@ -259,13 +259,13 @@ declare module '@cobuildlab/boost' {
     props: GridLayoutProps,
   ): React.ComponentElement<GridLayoutProps>;
 
-  export interface GridBoxProps extends TagProps {
+  interface GridBoxProps extends TagProps {
     children?: React.ReactNode;
-    /** Grid-box direction */
+    /* Grid-box direction */
     direction?: 'column' | 'row';
-    /** When true then set box scrollable */
+    /* When true then set box scrollable */
     scrollable?: boolean;
-    /** Align-self css rule */
+    /* Align-self css rule */
     alignSelf?:
       | 'start'
       | 'end'
@@ -273,7 +273,7 @@ declare module '@cobuildlab/boost' {
       | 'stretch'
       | 'flex-end'
       | 'flex-start';
-    /** Justify-self css rule */
+    /* Justify-self css rule */
     justifySelf?:
       | 'start'
       | 'end'
@@ -281,7 +281,7 @@ declare module '@cobuildlab/boost' {
       | 'stretch'
       | 'flex-end'
       | 'flex-start';
-    /** Justify-content css rule */
+    /* Justify-content css rule */
     justifyContent?:
       | 'start'
       | 'end'
@@ -292,7 +292,7 @@ declare module '@cobuildlab/boost' {
       | 'space-evenly'
       | 'flex-end'
       | 'flex-start';
-    /** Justify-content css rule */
+    /* Justify-content css rule */
     alignItems?:
       | 'start'
       | 'end'
@@ -303,7 +303,7 @@ declare module '@cobuildlab/boost' {
       | 'space-evenly'
       | 'flex-end'
       | 'flex-start';
-    /** Align-content css rule */
+    /* Align-content css rule */
     alignContent?:
       | 'start'
       | 'end'
@@ -314,20 +314,19 @@ declare module '@cobuildlab/boost' {
       | 'space-evenly'
       | 'flex-end'
       | 'flex-start';
-    /** Text-align css rule */
+    /* Text-align css rule */
     textAlign?: 'left' | 'right' | 'center' | 'justify';
-    area?: string;
   }
 
   function BoxLayout(props: GridBoxProps): React.ComponentElement<GridBoxProps>;
 
-  const Grid = {Layout: GridLayout, Box: BoxLayout};
-  export {Grid};
+  const Grid = { Layout: GridLayout, Box: BoxLayout };
+  export { Grid };
 
   interface ModalProps extends TagProps {
     children: React.ReactNode;
     isOpen?: boolean;
-    onClose?: (data: any) => void;
+    onClose?: (data: unknown) => void;
     shouldCloseOnOverlayClick?: boolean;
     shouldCloseOnEscPress?: boolean;
     id?: string;
@@ -419,23 +418,24 @@ declare module '@cobuildlab/boost' {
   Table.BodyCell = TableBodyCell;
 
   export interface ButtonProps extends TagProps {
-    /** Callback to handle click */
-    onClick?: () => any;
-    /** Button content */
+    /* Callback to handle click */
+    onClick?: () => unknown;
+    /* Button content */
     children?: React.ReactNode;
-    /** Then true when stretch to the parent width */
+    /* Then true when stretch to the parent width */
     stretch?: boolean;
-    /** Then true when show loader */
+    /* Then true when show loader */
     loading?: boolean;
-    /** Then true when disable button */
+    /* Then true when disable button */
     disabled?: boolean;
-    /** Then button is squared */
+    /* Then button is squared */
     squared?: boolean;
-    /** Then button is rounded */
+    /* Then button is rounded */
     rounded?: boolean;
-    /** Possible button types */
+    /* Possible button types */
     type?: 'submit' | 'button' | 'reset';
-    /** Possible button colors */
+    text?: string;
+    /* Possible button colors */
     color?:
       | 'primary'
       | 'default'
@@ -443,13 +443,13 @@ declare module '@cobuildlab/boost' {
       | 'danger'
       | 'success'
       | 'warning';
-    /** The type of button */
+    /* The type of button */
     variant?: 'outlined' | 'raised' | 'ghost' | 'link';
-    /** Posible sizes */
+    /* Posible sizes */
     size?: 'sm' | 'md' | 'lg';
-    /** Possible to reassign the button tag */
-    tagName?: any;
-    /** Enable autosize for icons */
+    /* Possible to reassign the button tag */
+    tagName?: unknown;
+    /* Enable autosize for icons */
     withIconAutosize?: boolean;
   }
 
@@ -458,74 +458,74 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<ButtonProps>;
 
   type InputCommonProps = {
-    /** Field placeholder */
+    /* Field placeholder */
     placeholder?: string;
-    /** Html auto-complete representation */
+    /* Html auto-complete representation */
     autoComplete?: string | boolean;
-    /** Html auto-focus representation */
+    /* Html auto-focus representation */
     autoFocus?: boolean;
-    /** Disabled */
+    /* Disabled */
     disabled?: boolean;
-    /** When true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
-    /** When true then don't show error indicator  */
+    /* When true then don't show error indicator  */
     hideErrorIndicator?: boolean;
-    /** Align of the input value */
+    /* Align of the input value */
     align?: 'center' | 'left' | 'right';
-    /** Left icon componen */
+    /* Left icon componen */
     leftIcon?: React.ReactNode;
-    /** Right icon componen */
+    /* Right icon componen */
     rightIcon?: React.ReactNode;
-    /** Max symbols in the input value */
+    /* Max symbols in the input value */
     maxLength?: number;
-    /** Callback to set input ref */
-    insideRef?: (field: typeof HTMLInputElement) => any;
-    /** Kind of the input */
+    /* Callback to set input ref */
+    insideRef?: (field: typeof HTMLInputElement) => unknown;
+    /* Kind of the input */
     kind?: 'bordered' | 'underline';
-    /** Readonly */
+    /* Readonly */
     readOnly?: boolean;
-    /** Clearable */
+    /* Clearable */
     clearable?: boolean;
     hideNumberArrows?: boolean;
   };
 
   interface InputProps extends InputCommonProps {
-    /** Input name */
+    /* Input name */
     name?: string;
-    /** Input value */
+    /* Input value */
     value?: string | number;
-    /** Possible input types */
+    /* Possible input types */
     type?: 'text' | 'number' | 'password' | 'email' | 'url';
-    /** Then true when show error styles */
+    /* Then true when show error styles */
     hasError?: boolean;
-    /** Text of the error */
+    /* Text of the error */
     errorText?: string;
-    /** Mask string in the react-input-mask format */
+    /* Mask string in the react-input-mask format */
     mask?: string;
-    /** Set custom input width in rem */
+    /* Set custom input width in rem */
     width?: number;
-    /** Callback to change input value */
+    /* Callback to change input value */
     onChange?: (
       value?: string | number,
       event?: React.SyntheticEvent<HTMLInputElement>,
     ) => void;
     onFocus?: (field: React.SyntheticEvent<HTMLInputElement>) => void;
     onBlur?: (field: React.SyntheticEvent<HTMLInputElement>) => void;
-    /** Callback which called on clear */
+    /* Callback which called on clear */
     onClear?: () => void;
     step?: string | number;
     min?: string | number;
     max?: string | number;
     maxLength?: number;
+    style: Record<string, unknown>;
   }
 
-  export class Input extends React.PureComponent<InputProps> {
-  }
+  export class Input extends React.PureComponent<InputProps> {}
 
   interface LinkProps extends TagProps {
     children?: React.ReactNode;
     color?: string;
-    tagName?: any;
+    tagName?: unknown;
     text?: string;
     underline?: boolean;
   }
@@ -535,7 +535,7 @@ declare module '@cobuildlab/boost' {
   interface ParagraphProps extends TagProps {
     children?: React.ReactNode | string | number;
     text?: string | number;
-    color?: any;
+    color?: unknown;
     align?: 'left' | 'center' | 'right';
     weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
     verticalAlign?: string;
@@ -545,7 +545,7 @@ declare module '@cobuildlab/boost' {
     props: ParagraphProps,
   ): React.ComponentElement<ParagraphProps>;
 
-  interface AvatarProps extends TagProps {
+  export interface AvatarProps extends TagProps {
     src?: string;
     firstName?: string;
     lastName?: string;
@@ -561,8 +561,8 @@ declare module '@cobuildlab/boost' {
   interface DialogProps extends Omit<ModalProps, 'children'> {
     children?: React.ReactNode;
     isOpen?: boolean;
-    onClose?: (data: any) => void;
-    onOpen?: (data: any) => void;
+    onClose?: (data: unknown) => void;
+    onOpen?: (data: unknown) => void;
     shouldCloseOnOverlayClick?: boolean;
     shouldCloseOnEscPress?: boolean;
     padding?: PropSizes;
@@ -585,6 +585,7 @@ declare module '@cobuildlab/boost' {
     children?: React.ReactNode;
     title: string;
     padding?: PropSizes;
+    onClose?: () => void;
   }
 
   export function DialogHeader(
@@ -612,7 +613,7 @@ declare module '@cobuildlab/boost' {
     children?: React.ReactNode;
     expandedWidth?: string;
     collapsedWidth: string;
-    color?: any;
+    color?: unknown;
     expanded?: boolean;
   }
 
@@ -634,23 +635,23 @@ declare module '@cobuildlab/boost' {
 
   interface TooltipProps extends TagProps {
     children: React.ReactNode | ((props: RenderProps) => React.ReactNode);
-    /** Default content position relative target */
+    /* Default content position relative target */
     placement?: 'top' | 'left' | 'bottom' | 'right';
-    /** Custom tag of the tooltip target */
+    /* Custom tag of the tooltip target */
     tagName?: string;
-    /** Custom style of the cursor */
+    /* Custom style of the cursor */
     cursor?: string;
-    /** Tooltip message */
+    /* Tooltip message */
     message: React.ReactNode;
-    /** Default state of the opening */
+    /* Default state of the opening */
     defaultOpen?: boolean;
-    /** Possible tooltip trigger */
+    /* Possible tooltip trigger */
     trigger?: 'hover' | 'click';
-    /** Replace tooltip message to the dom root by the portal */
+    /* Replace tooltip message to the dom root by the portal */
     withPortal?: boolean;
-    /** Whether events (resize, scroll) are initially enabled */
+    /* Whether events (resize, scroll) are initially enabled */
     eventsEnabled?: boolean;
-    /** Popper modifiers */
+    /* Popper modifiers */
     modifiers?: Record<string, unknown>;
   }
 
@@ -658,27 +659,28 @@ declare module '@cobuildlab/boost' {
     isOpen: boolean;
   };
 
-  export class Tooltip extends React.PureComponent<TooltipProps,
-    TooltipState> {
-  }
+  export class Tooltip extends React.PureComponent<
+    TooltipProps,
+    TooltipState
+  > {}
 
   type DropdownControlledProps = {
-    /** Open state of the dropdown */
+    /* Open state of the dropdown */
     isOpen: boolean;
-    /** When true then  plate */
+    /* When true then  plate */
     stretch?: boolean;
-    /** Callback to close dropdown */
+    /* Callback to close dropdown */
     onCloseDropdown?: () => void;
-    /** Callback to open dropdown */
+    /* Callback to open dropdown */
     onOpenDropdown?: () => void;
     children: React.ReactNode;
     css?: Record<string, unknown>;
   };
 
   type DropdownUncontroledProps = {
-    /** Default opened state for the uncontorlled mode */
+    /* Default opened state for the uncontorlled mode */
     defaultOpen?: boolean;
-    /** When true then  plate */
+    /* When true then  plate */
     stretch?: boolean;
     children: React.ReactNode;
     css?: Record<string, unknown>;
@@ -688,33 +690,33 @@ declare module '@cobuildlab/boost' {
     children:
       | React.ReactNode
       | ((props: {
-      toggleDropdown: () => void;
-      closeDropdown?: () => void;
-      openDropdown?: () => void;
-      isOpen: boolean;
-    }) => React.ReactNode);
-    /** When exists then stretch drodown head */
+          toggleDropdown: () => void;
+          closeDropdown?: () => void;
+          openDropdown?: () => void;
+          isOpen: boolean;
+        }) => React.ReactNode);
+    /* When exists then stretch drodown head */
     stretch?: boolean;
-    /** Prevent propagation on click */
+    /* Prevent propagation on click */
     stopClickPropagation?: boolean;
-    /** OnClick callback. When exists then disalbe auto toogle dropdown on click */
+    /* OnClick callback. When exists then disalbe auto toogle dropdown on click */
     onClick?: (event: React.MouseEvent) => void;
-    /** Prevent toggle action */
+    /* Prevent toggle action */
     disabled?: boolean;
   }
 
   interface DropdownBodyProps extends TagProps {
-    /** Takes either react dom element or function */
+    /* Takes either react dom element or function */
     children:
       | React.ReactNode
       | ((props: {
-      toggleDropdown: () => void;
-      closeDropdown?: () => void;
-      openDropdown?: () => void;
-      isOpen: boolean;
-    }) => React.ReactNode);
+          toggleDropdown: () => void;
+          closeDropdown?: () => void;
+          openDropdown?: () => void;
+          isOpen: boolean;
+        }) => React.ReactNode);
 
-    /** Default content position relative target */
+    /* Default content position relative target */
     placement?:
       | 'top'
       | 'left'
@@ -725,31 +727,32 @@ declare module '@cobuildlab/boost' {
       | 'bottom-start'
       | 'top-end'
       | 'top-start';
-    /** Default content align relative target */
+    /* Default content align relative target */
     pin?: 'left' | 'right';
-    /** Set body offset relative target */
+    /* Set body offset relative target */
     offset?: PropSizes;
-    /** Use fixed position instead of absolute */
+    /* Use fixed position instead of absolute */
     positionFixed?: boolean;
-    /** Manual set width */
+    /* Manual set width */
     width?: number;
-    /** Popper js option https://popper.js.org/popper-documentation.html#modifiers..preventOverflow */
+    /* Popper js option https://popper.js.org/popper-documentation.html#modifiers..preventOverflow */
     preventOverflow?: boolean;
-    /** Prevent unmount dropdown content on close */
+    /* Prevent unmount dropdown content on close */
     forceRender?: boolean;
-    /** Replace dropdown body to the dom root by the portal */
+    /* Replace dropdown body to the dom root by the portal */
     withPortal?: boolean;
-    /** When true then close dropdown on outside clicking */
+    /* When true then close dropdown on outside clicking */
     closeOnClickOutside?: boolean;
 
-    /**  */
+    /*  */
     modifiers?: Record<string, unknown>;
-    /** Options for background color */
+    /* Options for background color */
     background?: 'white' | 'dark' | 'none';
-    /** Options for body padding */
+    /* Options for body padding */
     padding?: PropSizes;
-    /** Stretch drodpown body width to the target width */
+    /* Stretch drodpown body width to the target width */
     stretch?: boolean;
+    role?: string;
   }
 
   export function DropdownHead(
@@ -768,12 +771,12 @@ declare module '@cobuildlab/boost' {
   Dropdown.Body = DropdownBody;
 
   type Theme = {
-    COLORS: any;
-    SIZES: any;
-    Z_INDEX: any;
-    FONTS: any;
+    COLORS: unknown;
+    SIZES: unknown;
+    Z_INDEX: unknown;
+    FONTS: unknown;
     components: {
-      [key: string]: any;
+      [key: string]: unknown;
     };
   };
 
@@ -787,12 +790,12 @@ declare module '@cobuildlab/boost' {
     props: BoostProviderProps,
   ): React.ComponentElement<BoostProviderProps>;
 
-  export function createTheme(extendTheme: any): Theme;
+  export function createTheme(extendTheme: unknown): Theme;
 
   type LoaderProps = {
     size?: 'sm' | 'md' | 'lg';
     stretch?: boolean;
-    color?: any;
+    color?: unknown;
   } & TagProps;
 
   export function Loader(
@@ -858,19 +861,19 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<ButtonGroupProps>;
 
   type CheckboxProps = {
-    /** Checked state */
+    /* Checked state */
     checked: boolean | string;
-    /** Indeterminate state, useful for sub-options */
+    /* Indeterminate state, useful for sub-options */
     indeterminate: boolean;
-    /** Checkbox name */
+    /* Checkbox name */
     name?: string;
-    /** Checkbox label */
+    /* Checkbox label */
     label?: string;
-    /** When error then show error styles */
+    /* When error then show error styles */
     hasError?: boolean;
-    /** Show disabled styles  */
+    /* Show disabled styles  */
     disabled?: boolean;
-    /** No wrap text  */
+    /* No wrap text  */
     nowrap?: boolean;
   } & TagProps;
 
@@ -883,11 +886,11 @@ declare module '@cobuildlab/boost' {
     data?: Record<string, unknown>;
     dirty?: boolean;
     dirtySinceLastSubmit?: boolean;
-    error?: any;
-    initial?: any;
+    error?: unknown;
+    initial?: unknown;
     invalid?: boolean;
     pristine?: boolean;
-    submitError?: any;
+    submitError?: unknown;
     submitFailed?: boolean;
     submitSucceeded?: boolean;
     touched?: boolean;
@@ -899,8 +902,11 @@ declare module '@cobuildlab/boost' {
     name?: string;
     onFocus?: (field: React.SyntheticEvent<HTMLInputElement>) => void;
     onBlur?: (field: React.SyntheticEvent<HTMLInputElement>) => void;
-    onChange?: (event?: React.SyntheticEvent) => void;
-    value?: any;
+    onChange?: (
+      value?: string | number | null,
+      event?: SyntheticInputEvent<HTMLInputElement>,
+    ) => void;
+    value?: unknown;
     checked?: boolean;
     type?: string;
   };
@@ -920,19 +926,19 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<FormFieldProps>;
 
   type CheckboxFieldProps = {
-    /** Field label */
+    /* Field label */
     label?: string;
-    /** Form input object */
+    /* Form input object */
     input: InputType;
-    /** Form meta object */
+    /* Form meta object */
     meta?: MetaType;
-    /** Color of the check */
+    /* Color of the check */
     color?: 'primary' | 'secondary';
-    /** Show disabled styles  */
+    /* Show disabled styles  */
     disabled?: boolean;
-    /** No wrap text  */
+    /* No wrap text  */
     nowrap?: boolean;
-    /** When true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
   } & FormFieldProps;
 
@@ -974,11 +980,11 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<FormSectionProps>;
 
   type DateInputFieldProps = {
-    /** Field label */
+    /* Field label */
     label?: string;
-    /** Form input object */
+    /* Form input object */
     input?: Record<string, unknown>;
-    /** Form meta object */
+    /* Form meta object */
     meta?: Record<string, unknown>;
   } & FormFieldProps;
 
@@ -1005,9 +1011,9 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<FormSectionBodyProps>;
 
   type FormErrorProps = {
-    /** Form error */
+    /* Form error */
     error?: string;
-    /** Form error */
+    /* Form error */
     children?: React.ReactNode;
   } & TagProps;
 
@@ -1016,13 +1022,13 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<FormErrorProps>;
 
   type FormPlateProps = {
-    /** When true then stretch form by the parent */
+    /* When true then stretch form by the parent */
     stretch?: boolean;
-    /** Form content */
+    /* Form content */
     children?: React.ReactNode;
-    /** Component to use instead of form tag */
+    /* Component to use instead of form tag */
     component?: React.ReactNode;
-    /** Custom class name */
+    /* Custom class name */
     className?: string;
   } & FlexLayoutProps;
 
@@ -1058,42 +1064,42 @@ declare module '@cobuildlab/boost' {
     props: IndicatorProps,
   ): React.ComponentElement<IndicatorProps>;
 
-  type InputFieldProps = {
-    /** field label */
+  export type InputFieldProps = {
+    /* Field label */
     label?: string;
-    /** when true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
-    /** direction of the input with label */
+    /* Direction of the input with label */
     direction?: 'row' | 'column';
-    /** set custom input width */
+    /* Set custom input width */
     width?: number;
-    /** max symbols in the input value */
+    /* Max symbols in the input value */
     maxLength?: number;
-    /** when true then don't show error label */
+    /* When true then don't show error label */
     hideErrorLabel?: boolean;
-    /** when true then don't show error indicator */
+    /* When true then don't show error indicator */
     hideErrorIndicator?: boolean;
-    /** align of the input value */
+    /* Align of the input value */
     align?: 'center' | 'left' | 'right';
-    /** input placeholder */
+    /* Input placeholder */
     placeholder?: string;
-    /** form input object */
+    /* Form input object */
     input?: InputType;
-    /** form meta object */
+    /* Form meta object */
     meta?: MetaType;
-    /** callback to set input ref */
-    insideRef?: (element: any) => void;
-    /** readonly */
+    /* Callback to set input ref */
+    insideRef?: (element: unknown) => void;
+    /* Readonly */
     readOnly?: boolean;
-    /** clearable */
+    /* Clearable */
     clearable?: boolean;
-    /** html auto-complete representation */
+    /* Html auto-complete representation */
     autoComplete?: boolean;
-    /** disabled */
+    /* Disabled */
     disabled?: boolean;
-    /** callback which called on clear */
+    /* Callback which called on clear */
     onClear?: () => void;
-    /** html auto-focus representation */
+    /* Html auto-focus representation */
     autoFocus?: boolean;
     step?: string | number;
     min?: string | number;
@@ -1105,7 +1111,7 @@ declare module '@cobuildlab/boost' {
     props: InputFieldProps,
   ): React.ComponentElement<InputFieldProps>;
 
-  type LabelProps = {
+  export type LabelProps = {
     kind?: 'primary' | 'secondary' | 'disabled';
     for?: string;
     children?: string;
@@ -1138,7 +1144,7 @@ declare module '@cobuildlab/boost' {
 
   Menu.Item = MenuItem;
 
-  export function NoData(props: any): React.ComponentElement;
+  export function NoData(props: unknown): React.ComponentElement;
 
   type PaginationProps = {
     page?: number;
@@ -1148,7 +1154,7 @@ declare module '@cobuildlab/boost' {
     total: number;
     showSizeChanger?: boolean;
     pageSizeOptions?: number[];
-    onChange?: (page: number, pageSize: number) => any;
+    onChange?: (page: number, pageSize: number) => unknown;
   };
 
   export function Pagination(
@@ -1176,26 +1182,26 @@ declare module '@cobuildlab/boost' {
   };
 
   type RadioClonedProps = {
-    /** private cloned props */
+    /* Private cloned props */
     name?: string;
-    /** private cloned props */
+    /* Private cloned props */
     onChange?: (value: string | number, event: React.SyntheticEvent) => void;
-    /** private cloned props */
+    /* Private cloned props */
     selectedValue?: string | number;
-    /** then true when show error styles */
+    /* Then true when show error styles */
     hasError?: boolean;
   };
 
   type RadioItemProps = {
-    /** text of the label */
+    /* Text of the label */
     label?: string;
-    /** radio value */
+    /* Radio value */
     value: string | number;
-    /** possible colors */
+    /* Possible colors */
     color?: 'primary' | 'secondary';
-    /** when true then disable radio */
+    /* When true then disable radio */
     disabled?: boolean;
-    /** custom function to check the equals */
+    /* Custom function to check the equals */
     equalsFunc?: (arg: EqualsFuncArgument) => boolean;
   } & TagProps;
 
@@ -1204,13 +1210,13 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<RadioItemProps & RadioClonedProps>;
 
   type RadioButtonProps = {
-    /** text of the label */
+    /* Text of the label */
     label?: string;
-    /** radio value */
+    /* Radio value */
     value: string | number;
-    /** when true then disable radio */
+    /* When true then disable radio */
     disabled?: boolean;
-    /** custom function to check the equals */
+    /* Custom function to check the equals */
     equalsFunc?: (arg: EqualsFuncArgument) => boolean;
   } & TagProps;
 
@@ -1220,23 +1226,23 @@ declare module '@cobuildlab/boost' {
 
   type RadioProps = {
     children?: React.ReactNode;
-    /** optional name of the group */
+    /* Optional name of the group */
     name?: string;
-    /** selected value */
+    /* Selected value */
     value?: string | number;
-    /** offset between radio items */
+    /* Offset between radio items */
     gap?: PropSizes;
-    /** direction of the radio items */
+    /* Direction of the radio items */
     direction?: 'row' | 'column';
-    /** callback to change the radio state */
+    /* Callback to change the radio state */
     onChange?: (value: string | number, event: React.SyntheticEvent) => void;
-    /** then true when show error styles */
+    /* Then true when show error styles */
     hasError?: boolean;
-    /** options to define radio items */
-    options?: Array<{ value: any; label: string; disabled?: boolean }>;
-    /** disabled */
+    /* Options to define radio items */
+    options?: Array<{ value: unknown; label: string; disabled?: boolean }>;
+    /* Disabled */
     disabled?: boolean;
-    /** stretch */
+    /* Stretch */
     stretch?: boolean;
   } & FlexLayoutProps;
 
@@ -1249,26 +1255,26 @@ declare module '@cobuildlab/boost' {
     Item: RadioItem,
     Group: RadioGroup,
   };
-  export {Radio};
+  export { Radio };
 
   type RadioGroupFieldProps = {
-    /** Grop.Item components */
+    /* Grop.Item components */
     children?: React.ReactNode;
-    /** when true then don't show error label */
+    /* When true then don't show error label */
     hideErrorLabel?: boolean;
-    /** form input object */
+    /* Form input object */
     input: InputType;
-    /** form meta object */
+    /* Form meta object */
     meta?: MetaType;
-    /** offset between radio items */
+    /* Offset between radio items */
     gap?: PropSizes;
-    /** direction of the radio items */
+    /* Direction of the radio items */
     direction?: 'row' | 'column';
-    /** options to define radio items */
-    options?: Array<{ value: any; label: string; disabled?: boolean }>;
-    /** disabled */
+    /* Options to define radio items */
+    options?: Array<{ value: unknown; label: string; disabled?: boolean }>;
+    /* Disabled */
     disabled?: boolean;
-    /** stretch */
+    /* Stretch */
     stretch?: boolean;
   } & FormFieldProps;
 
@@ -1295,7 +1301,7 @@ declare module '@cobuildlab/boost' {
   type SecondaryNavigationItemProps = {
     label?: string;
     active?: boolean;
-    actions?: Record<string, unknown>[] | ((...args: any) => void);
+    actions?: Record<string, unknown>[] | ((...args: unknown) => void);
   } & TagProps;
 
   function SecondaryNavigationItem(
@@ -1306,21 +1312,15 @@ declare module '@cobuildlab/boost' {
 
   type SelectProps = {
     options: Array<{
-      label: any;
+      label: unknown;
       value: string;
       options?: Array<Record<string, unknown>>;
     }>;
-    onChange: (
-      value: any,
-      event?: any,
-    ) => void;
+    onChange?: (value: string, event?: UIEvent) => void;
     inputValue?: string;
-    onInputChange?: (
-      value: string,
-      event?: any,
-    ) => void;
+    onInputChange?: (value: string, event?: unknown) => void;
     placeholder?: string;
-    value?: any | any[];
+    value?: unknown | unknown[];
     loading?: boolean;
     disabled?: boolean;
     multiple?: boolean;
@@ -1331,16 +1331,16 @@ declare module '@cobuildlab/boost' {
     autoFocus?: boolean;
     zIndex?: string | number;
     valueComponent?: React.ReactNode;
-    components?: any;
+    components?: unknown;
     className?: string;
-    formatOptionLabel?: (...arg: any) => void;
-    filterOption?: (...arg: any) => void;
-    getOptionValue?: (...arg: any) => void;
-    getOptionLabel?: (...arg: any) => void;
-    /** when stretch is true, width is 100% */
+    formatOptionLabel?: (...arg: unknown) => void;
+    filterOption?: (...arg: unknown) => void;
+    getOptionValue?: (...arg: unknown) => void;
+    getOptionLabel?: (...arg: unknown) => void;
+    /* When stretch is true, width is 100% */
     stretch?: boolean;
     isSearchable?: boolean;
-    css?: any;
+    css?: unknown;
   } & TagProps;
 
   export function Select(
@@ -1348,24 +1348,24 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<SelectProps>;
 
   type SelectFieldProps = {
-    /** array of select options */
+    /* Array of select options */
     options: Array<Record<string, unknown>>;
-    /** placeholder */
+    /* Placeholder */
     placeholder?: string;
-    /** field label */
+    /* Field label */
     label?: string;
-    /** when true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
-    /** form input object */
+    /* Form input object */
     input?: InputType;
-    /** form meta object */
+    /* Form meta object */
     meta?: MetaType;
-    /** custom value component */
+    /* Custom value component */
     valueComponent?: React.ReactNode;
-    /** controlled search value */
+    /* Controlled search value */
     inputValue?: string;
-    /** callback to control search value */
-    onInputChange?: (value: string, event?: any) => void;
+    /* Callback to control search value */
+    onInputChange?: (value: string, event?: unknown) => void;
   } & SelectProps;
 
   export function SelectField(
@@ -1376,7 +1376,7 @@ declare module '@cobuildlab/boost' {
     label?: string;
     name?: string;
     value: boolean;
-    onChange?: (checked: boolean, event: any) => void;
+    onChange?: (checked: boolean, event: unknown) => void;
     inverted?: boolean;
   } & TagProps;
 
@@ -1403,15 +1403,15 @@ declare module '@cobuildlab/boost' {
 
   type TabsProps = {
     children: React.ReactNode;
-    /** callback when a tab is selected */
+    /* Callback when a tab is selected */
     onSelect?: (tabId: string) => void;
-    /** tabId of the currently displayed tab */
+    /* TabId of the currently displayed tab */
     selectedTabId: string;
   };
 
   type WithStateTabsProps = {
     children: React.ReactNode;
-    /** tabId of the default selected tab */
+    /* TabId of the default selected tab */
     defaultSelectedTabId: string;
   };
 
@@ -1421,9 +1421,9 @@ declare module '@cobuildlab/boost' {
 
   type TabPanelProps = {
     children: React.ReactNode;
-    /** id of Tab element */
+    /* Id of Tab element */
     tabId: string;
-    /** don't unmount then tab is hidden */
+    /* Don't unmount then tab is hidden */
     forceRender?: boolean;
   } & TagProps;
 
@@ -1434,7 +1434,13 @@ declare module '@cobuildlab/boost' {
   type TabTitleProps = {
     children:
       | React.ReactNode
-      | (({selected, disabled}: {selected: boolean, disabled: boolean}) => React.ReactNode);
+      | (({
+          selected,
+          disabled,
+        }: {
+          selected: boolean;
+          disabled: boolean;
+        }) => React.ReactNode);
     disabled?: boolean;
     forceRender?: boolean;
     tabId: string;
@@ -1450,7 +1456,7 @@ declare module '@cobuildlab/boost' {
   type TextAreaProps = {
     cols?: number;
     name?: string;
-    onChange?: (value: string, event?: any) => void;
+    onChange?: (value: string, event?: unknown) => void;
     placeholder?: string;
     rows?: number;
     value?: string;
@@ -1463,19 +1469,19 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<TextAreaProps>;
 
   type TextAreaFieldProps = {
-    /** number of textarea columns */
+    /* Number of textarea columns */
     cols?: number;
-    /** number of textarea rows */
+    /* Number of textarea rows */
     rows?: number;
-    /** placeholder */
+    /* Placeholder */
     placeholder?: string;
-    /** field label */
+    /* Field label */
     label?: string;
-    /** when true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
-    /** form input object */
+    /* Form input object */
     input: Record<string, unknown>;
-    /** form meta object */
+    /* Form meta object */
     meta?: Record<string, unknown>;
   } & TextAreaProps;
 
@@ -1529,21 +1535,95 @@ declare module '@cobuildlab/boost' {
   ): React.ComponentElement<TreeSelectProps>;
 
   type TreeSelectFieldProps = {
-    /** array of select options option */
+    /* Array of select options option */
     options: Record<string, unknown> | Record<string, unknown>[];
-    /** placeholder */
+    /* Placeholder */
     placeholder?: string;
-    /** field label */
+    /* Field label */
     label?: string;
-    /** when true then stretch to the maximal width */
+    /* When true then stretch to the maximal width */
     stretch?: boolean;
-    /** form input object */
+    /* Form input object */
     input: InputType;
-    /** form meta object */
+    /* Form meta object */
     meta?: MetaType;
   } & TreeSelectProps;
 
   export function TreeSelectField(
     props: TreeSelectFieldProps,
   ): React.ComponentElement<TreeSelectFieldProps>;
+
+  /* TABLE TYPES */
+
+  function TableHeader(props: TableHeaderProps): React.FC<TableHeaderProps>;
+
+  type TableBodyProps<T> = {
+    children?: (T, index: number) => React.ReactNode;
+    data?: T[];
+    loading?: boolean;
+    action?: React$Node;
+    onActionClick?: () => void;
+    modifiers?: Record<string, unknown>;
+    noData?: React$Node;
+  };
+
+  class TableBody extends PureComponent<TableBodyProps<*>> {}
+
+  type TableBodyRowProps = {
+    children?: React.ReactNode;
+    columnGap?: PropSizes;
+  };
+
+  function TableBodyRow(
+    props: TableBodyRowProps,
+  ): React.ComponentElement<TableBodyRowProps>;
+
+  type TableFooterProps = {
+    children?: React$Node;
+  };
+
+  function TableFooter(
+    props: TableFooterProps,
+  ): React.ComponentElement<TableFooterProps>;
+
+  type TableHeaderCellProps = {
+    children?: React.ReactNode;
+    onSort?: (order: 'ASC' | 'DESC') => void;
+    enableSort?: boolean;
+    order?: 'ASC' | 'DESC';
+    cursor?: 'pointer' | 'default' | 'inherit';
+    justifyContent?: PropLayoutStretch;
+    alignItems?: PropLayout;
+  };
+
+  class TableHeaderCell extends PureComponent<TableHeaderCellProps> {}
+
+  type TableBodyCellProps = {
+    children?: React.ReactNode;
+    justifyContent?: PropLayoutStretch;
+    alignItems?: PropLayout;
+  };
+
+  function TableBodyCell(
+    props: TableBodyCellProps,
+  ): React.ComponentElement<TableBodyCellProps>;
+
+  type TablePlateProps = {
+    children?: React.ReactNode;
+    stretch?: boolean;
+    rows?: string;
+  };
+
+  function Table(
+    props: TablePlateProps,
+  ): React.ComponentElement<TablePlateProps>;
+
+  Table.Header = TableHeader;
+  Table.Body = TableBody.caller;
+  Table.BodyRow = TableBodyRow;
+  Table.Footer = TableFooter;
+  Table.HeaderCell = TableHeaderCell.caller;
+  Table.BodyCell = TableBodyCell;
+
+  export { Table };
 }
