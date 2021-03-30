@@ -1,15 +1,15 @@
 // @flow
 
-import React from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import React from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-import { DateInputValue } from './DateInputValue';
-import { Dropdown } from '../Dropdown';
-import { Icon } from '../Icon';
+import { DateInputValue } from "./DateInputValue";
+import { Dropdown } from "../Dropdown";
+import { Icon } from "../Icon";
 
-import { DateInputTag, DateInputCalendarTag } from './DateInput.theme';
-import * as utils from './DateInput.utils';
+import { DateInputTag, DateInputCalendarTag } from "./DateInput.theme";
+import * as utils from "./DateInput.utils";
 
 type DateInputProps = {
   onChange: (value: ?string) => void,
@@ -60,10 +60,14 @@ class DateInput extends React.Component<DateInputProps, DateInputState> {
   getDateFormat() {
     const { isMonthPicker, withTime } = this.props;
 
-    return isMonthPicker ? utils.YEAR_MONTH_FORMAT : withTime ? utils.DATETIME_FORMAT : utils.DATE_FORMAT;
+    return isMonthPicker
+      ? utils.YEAR_MONTH_FORMAT
+      : withTime
+      ? utils.DATETIME_FORMAT
+      : utils.DATE_FORMAT;
   }
 
-  onChangeText = ({ target: { value }}: Object) => {
+  onChangeText = ({ target: { value } }: Object) => {
     const { withTime } = this.props;
     const dateFormat = this.getDateFormat();
 
@@ -90,9 +94,11 @@ class DateInput extends React.Component<DateInputProps, DateInputState> {
     const luxonValue = utils.fromViewFormatToLuxon(textValue, dateFormat);
 
     if (luxonValue && !luxonValue.isValid) {
-      this.setState({ textValue: utils.fromISOToViewFormat(this.props.value, dateFormat) });
+      this.setState({
+        textValue: utils.fromISOToViewFormat(this.props.value, dateFormat),
+      });
     }
-  }
+  };
 
   onChangeDate = (selected: Date) => {
     const { withTime, value } = this.props;
@@ -101,7 +107,10 @@ class DateInput extends React.Component<DateInputProps, DateInputState> {
 
     this.props.onChange(isoValue);
 
-    if (!withTime || Math.abs(selected - (value ? new Date(value) : 0)) <= 24 * 60 * 60 * 1000) {
+    if (
+      !withTime ||
+      Math.abs(selected - (value ? new Date(value) : 0)) <= 24 * 60 * 60 * 1000
+    ) {
       this.close();
     }
   };
@@ -117,7 +126,7 @@ class DateInput extends React.Component<DateInputProps, DateInputState> {
       showMonthYearPicker: isMonthPicker,
       onChange: this.onChangeDate,
       inline: true,
-      todayButton: isMonthPicker ? 'Current' : 'Today',
+      todayButton: isMonthPicker ? "Current" : "Today",
     };
   }
 
@@ -142,41 +151,61 @@ class DateInput extends React.Component<DateInputProps, DateInputState> {
   render() {
     const collectedProps = this.collectProps();
 
-    const { value, withTime, withPortal, stretch, onChange, clearable, disabled, placeholder, isMonthPicker, autoFocus, ...rest } = this.props;
+    const {
+      value,
+      withTime,
+      withPortal,
+      stretch,
+      onChange,
+      clearable,
+      disabled,
+      placeholder,
+      isMonthPicker,
+      autoFocus,
+      ...rest
+    } = this.props;
 
     const { textValue, isOpen } = this.state;
-    const mask = isMonthPicker ? utils.YEAR_MONTH_MASK : withTime ? utils.DATETIME_MASK : utils.DATE_MASK;
+    const mask = isMonthPicker
+      ? utils.YEAR_MONTH_MASK
+      : withTime
+      ? utils.DATETIME_MASK
+      : utils.DATE_MASK;
 
     return (
-      <DateInputTag stretch={ stretch } { ...rest }>
+      <DateInputTag stretch={stretch} {...rest}>
         <DateInputValue
-          placeholder={ placeholder }
-          mask={ mask }
-          value={ textValue }
-          onChange={ this.onChangeText }
-          onBlur={ this.onBlur }
-          clearable={ clearable }
-          disabled={ disabled }
-          autoFocus={ autoFocus }
+          placeholder={placeholder}
+          mask={mask}
+          value={textValue}
+          onChange={this.onChangeText}
+          onBlur={this.onBlur}
+          clearable={clearable}
+          disabled={disabled}
+          autoFocus={autoFocus}
         />
         <Dropdown
-          isOpen={ isOpen && !disabled }
-          stretch={ stretch }
-          onCloseDropdown={ this.close }
-          onOpenDropdown={ this.open }
+          isOpen={isOpen && !disabled}
+          stretch={stretch}
+          onCloseDropdown={this.close}
+          onOpenDropdown={this.open}
           css={{ flex: 0 }}
         >
-          <Dropdown.Head onClick={ this.toggle }>
+          <Dropdown.Head onClick={this.toggle} stopClickPropagation>
             <DateInputCalendarTag>
               <Icon name="Calendar" />
             </DateInputCalendarTag>
           </Dropdown.Head>
-          <Dropdown.Body withPortal={ withPortal } placement="bottom-end" modifiers={{
-            preventOverflow: {
-              boundariesElement: 'viewport',
-            },
-          }}>
-            <DatePicker { ...collectedProps } />
+          <Dropdown.Body
+            withPortal={withPortal}
+            placement="bottom-end"
+            modifiers={{
+              preventOverflow: {
+                boundariesElement: "viewport",
+              },
+            }}
+          >
+            <DatePicker {...collectedProps} />
           </Dropdown.Body>
         </Dropdown>
       </DateInputTag>
