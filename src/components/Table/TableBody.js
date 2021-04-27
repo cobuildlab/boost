@@ -7,6 +7,7 @@ import { TableAction } from './TableAction';
 import { Grid } from '../Grid';
 import { Button } from '../Button';
 import { createThemeTag } from '../../theme/createThemeTag';
+import { COLORS } from '../../theme';
 
 
 type TableBodyProps<T: Object> = {
@@ -17,6 +18,7 @@ type TableBodyProps<T: Object> = {
   onActionClick?: () => void,
   modifiers?: Object,
   noData?: React$Node,
+  colorLoading?: $Keys<typeof COLORS>,
 };
 
 const name = 'tableBody';
@@ -96,11 +98,11 @@ class TableBody extends PureComponent<TableBodyProps<*>> {
   };
 
   render() {
-    const { loading, ...rest } = this.props;
+    const { loading,colorLoading, ...rest } = this.props;
 
     return (
       <TableBodyTag { ...rest }>
-        <AsyncContent loading={ loading } stretch>
+        <AsyncContent loading={ loading } color={colorLoading} stretch>
           { this.renderContent() }
         </AsyncContent>
         { this.renderTableAction() }
