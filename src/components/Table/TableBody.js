@@ -98,7 +98,7 @@ class TableBody extends PureComponent<TableBodyProps<*>> {
   };
 
   render() {
-    const { loading,colorLoading, ...rest } = this.props;
+    const { loading,colorLoading="RED", ...rest } = this.props;
 
     return (
       <TableBodyTag { ...rest }>
