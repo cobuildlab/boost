@@ -6,12 +6,10 @@ import { HeaderCloseTag } from './Dialog.theme';
 import { Card } from '../Card';
 import { Text } from '../Text';
 import { Icon } from '../Icon';
-
 function DialogHeader(_ref) {
   var title = _ref.title,
-      onClose = _ref.onClose,
-      rest = _objectWithoutProperties(_ref, ["title", "onClose"]);
-
+    onClose = _ref.onClose,
+    rest = _objectWithoutProperties(_ref, ["title", "onClose"]);
   return ___EmotionJSX(Card.Header, _extends({
     offset: "lg"
   }, rest), ___EmotionJSX(Text, {
@@ -24,5 +22,4 @@ function DialogHeader(_ref) {
     title: "Close Dialog"
   })));
 }
-
 export { DialogHeader };

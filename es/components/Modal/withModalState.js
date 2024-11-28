@@ -6,36 +6,23 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 import React from 'react';
 import { ModalContext } from './ModalContext';
-
 var withModalState = function withModalState(BaseComponent) {
-  var ModalStateConsumer =
-  /*#__PURE__*/
-  function (_React$Component) {
+  var ModalStateConsumer = /*#__PURE__*/function (_React$Component) {
     _inherits(ModalStateConsumer, _React$Component);
-
     function ModalStateConsumer() {
       var _getPrototypeOf2;
-
       var _this;
-
       _classCallCheck(this, ModalStateConsumer);
-
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
-
       _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ModalStateConsumer)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
       _this.renderBaseComponentWithModalProps = function (modalContext) {
         var id = _this.props.id;
-
         var props = _objectSpread({
           onClose: function onClose() {
             return modalContext.closeModal(id);
@@ -44,32 +31,24 @@ var withModalState = function withModalState(BaseComponent) {
           isOpen: modalContext.state[id] ? modalContext.state[id].isOpen : false,
           args: modalContext.state[id] ? modalContext.state[id].args : undefined
         });
-
         return ___EmotionJSX(BaseComponent, props);
       };
-
       return _this;
     }
-
     _createClass(ModalStateConsumer, [{
       key: "render",
       value: function render() {
         var _this$props = this.props,
-            id = _this$props.id,
-            rest = _objectWithoutProperties(_this$props, ["id"]);
-
+          id = _this$props.id,
+          rest = _objectWithoutProperties(_this$props, ["id"]);
         if (id) {
           return ___EmotionJSX(ModalContext.Consumer, null, this.renderBaseComponentWithModalProps);
         }
-
         return ___EmotionJSX(BaseComponent, rest);
       }
     }]);
-
     return ModalStateConsumer;
   }(React.Component);
-
   return ModalStateConsumer;
 };
-
 export { withModalState };

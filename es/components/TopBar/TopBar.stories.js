@@ -1,17 +1,15 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
 /* eslint-disable no-alert */
+
 import React, { useState } from 'react';
 import { TopBar, Column, Icon, Text, Button } from '../../';
-
 var TopBarWithState = function TopBarWithState(props) {
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      isOpen = _useState2[0],
-      setIsOpen = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
   return ___EmotionJSX(TopBar, _extends({
     isOpen: isOpen,
     onClose: function onClose() {
@@ -19,7 +17,6 @@ var TopBarWithState = function TopBarWithState(props) {
     }
   }, props));
 };
-
 export default {
   title: 'Components/TopBar',
   component: TopBar

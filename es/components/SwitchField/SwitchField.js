@@ -5,19 +5,17 @@ import React from 'react';
 import * as formUtils from '../../utils/forms';
 import { Switch } from '../Switch';
 import { FormField } from '../Form/FormField';
-
 var SwitchField = function SwitchField(_ref) {
   var label = _ref.label,
-      input = _ref.input,
-      meta = _ref.meta,
-      showErrorOnTouched = _ref.showErrorOnTouched,
-      rest = _objectWithoutProperties(_ref, ["label", "input", "meta", "showErrorOnTouched"]);
-
+    input = _ref.input,
+    meta = _ref.meta,
+    showErrorOnTouched = _ref.showErrorOnTouched,
+    rest = _objectWithoutProperties(_ref, ["label", "input", "meta", "showErrorOnTouched"]);
   var name = input.name,
-      value = input.value,
-      onChange = input.onChange,
-      onFocus = input.onFocus,
-      onBlur = input.onBlur;
+    value = input.value,
+    onChange = input.onChange,
+    onFocus = input.onFocus,
+    onBlur = input.onBlur;
   var hasError = formUtils.hasError(meta, showErrorOnTouched);
   return ___EmotionJSX(FormField, _extends({}, rest, {
     input: input,
@@ -33,7 +31,6 @@ var SwitchField = function SwitchField(_ref) {
     hasError: hasError
   }));
 };
-
 SwitchField.defaultProps = {
   showErrorOnTouched: true
 };

@@ -8,7 +8,7 @@ import { withModal } from './withModal';
 describe('<ModalConsumer />', function () {
   var OpenCloseModal = function OpenCloseModal(_ref) {
     var openModal = _ref.openModal,
-        closeModal = _ref.closeModal;
+      closeModal = _ref.closeModal;
     return ___EmotionJSX(React.Fragment, null, ___EmotionJSX(Button, {
       onClick: function onClick() {
         return openModal('ID', {
@@ -25,7 +25,6 @@ describe('<ModalConsumer />', function () {
       className: "close-button"
     }, "Close")));
   };
-
   it('should open and close modal by modal id', function () {
     var wrapper = mount(___EmotionJSX(ModalProvider, null, ___EmotionJSX(Modal, {
       id: "ID"
@@ -36,7 +35,7 @@ describe('<ModalConsumer />', function () {
       }, args.ff);
     }), ___EmotionJSX(ModalContext.Consumer, null, function (_ref3) {
       var openModal = _ref3.openModal,
-          closeModal = _ref3.closeModal;
+        closeModal = _ref3.closeModal;
       return ___EmotionJSX(OpenCloseModal, {
         openModal: openModal,
         closeModal: closeModal

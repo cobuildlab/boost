@@ -19,11 +19,8 @@ import _memoize from "lodash/fp/memoize";
 import _isNil from "lodash/fp/isNil";
 import _find from "lodash/fp/find";
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 import React, { PureComponent } from 'react';
 import { TableHeader } from './TableHeader';
 import { TableBody } from './TableBody';
@@ -38,45 +35,32 @@ import { TableBodyCell } from './TableBodyCell';
 import { Heading } from '../Heading';
 var DEFAULT_SORT_ENABLE = true;
 var TABLE_BUILDER_PROPS = ['columns', 'columnGap', 'data', 'onActionClick', 'action', 'onChange', 'tableState', 'withSelection', 'withMultipleSort', 'withPagination', 'loading', 'renderCell', 'renderHeadCell', 'condensed', 'noData', 'expandedRowKeys', 'expandedRowRender', 'onExpand'];
-
-var TableBuilder =
-/*#__PURE__*/
-function (_PureComponent) {
+var TableBuilder = /*#__PURE__*/function (_PureComponent) {
   _inherits(TableBuilder, _PureComponent);
-
   function TableBuilder() {
     var _getPrototypeOf2;
-
     var _this;
-
     _classCallCheck(this, TableBuilder);
-
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TableBuilder)).call.apply(_getPrototypeOf2, [this].concat(args)));
     _this.state = {
       expandedRowKeys: []
     };
-
     _this.getGridColumns = function () {
       var _this$props = _this.props,
-          columns = _this$props.columns,
-          withSelection = _this$props.withSelection;
+        columns = _this$props.columns,
+        withSelection = _this$props.withSelection;
       var gridColumns = [];
-
       if (withSelection) {
         gridColumns.push('72px');
       }
-
       for (var i = 0; i < columns.length; i++) {
         gridColumns.push(columns[i].width || '1fr');
       }
-
       return gridColumns.join(' ');
     };
-
     _this.getColumn = function (columnName) {
       var columns = _this.props.columns;
       return _find(function (_ref) {
@@ -84,25 +68,21 @@ function (_PureComponent) {
         return columnName === name;
       }, columns) || {};
     };
-
     _this.getColumnSortEnable = function (name) {
       var column = _this.getColumn(name);
-
       var sortEnable = _isNil(column.sortEnable) ? DEFAULT_SORT_ENABLE : column.sortEnable;
       return sortEnable;
     };
-
     _this.onChange = function (tableState) {
       var onChange = _this.props.onChange;
       onChange && onChange(tableState);
     };
-
     _this.onSort = _memoize(function (name) {
       return function (orderDirection) {
         var _this$props2 = _this.props,
-            _this$props2$tableSta = _this$props2.tableState,
-            tableState = _this$props2$tableSta === void 0 ? {} : _this$props2$tableSta,
-            withMultipleSort = _this$props2.withMultipleSort;
+          _this$props2$tableSta = _this$props2.tableState,
+          tableState = _this$props2$tableSta === void 0 ? {} : _this$props2$tableSta,
+          withMultipleSort = _this$props2.withMultipleSort;
         var previousSort = tableState.sort || [];
         var currentSort = [{
           name: name,
@@ -112,58 +92,44 @@ function (_PureComponent) {
           var columnName = _ref2.name;
           return columnName !== name;
         }).concat(currentSort) : currentSort;
-
         _this.onChange(_objectSpread({}, tableState, {
           sort: sort
         }));
       };
     });
-
     _this.getColumnOrder = function (name) {
       var _this$props$tableStat = _this.props.tableState,
-          tableState = _this$props$tableStat === void 0 ? {} : _this$props$tableStat;
+        tableState = _this$props$tableStat === void 0 ? {} : _this$props$tableStat;
       var sort = tableState.sort || [];
-
       var _ref3 = sort.find(function (_ref4) {
-        var columnName = _ref4.name;
-        return columnName === name;
-      }) || {},
-          order = _ref3.order;
-
+          var columnName = _ref4.name;
+          return columnName === name;
+        }) || {},
+        order = _ref3.order;
       return order;
     };
-
     _this.onSelectAllRows = function () {
       var _this$props3 = _this.props,
-          _this$props3$tableSta = _this$props3.tableState,
-          tableState = _this$props3$tableSta === void 0 ? {} : _this$props3$tableSta,
-          data = _this$props3.data;
-
+        _this$props3$tableSta = _this$props3.tableState,
+        tableState = _this$props3$tableSta === void 0 ? {} : _this$props3$tableSta,
+        data = _this$props3.data;
       var isAllRowsSelected = _this.hasAllRowsSelection();
-
       var allIds = _map('id', data);
-
       var selectedIds = isAllRowsSelected ? [] : allIds;
-
       _this.onChange(_objectSpread({}, tableState, {
         selectedIds: selectedIds
       }));
     };
-
     _this.onSelectRow = function (id) {
       var _this$props$tableStat2 = _this.props.tableState,
-          tableState = _this$props$tableStat2 === void 0 ? {} : _this$props$tableStat2;
+        tableState = _this$props$tableStat2 === void 0 ? {} : _this$props$tableStat2;
       var previousSelectedIds = tableState.selectedIds || [];
-
       var isRowSelected = _this.hasRowSelection(id);
-
       var selectedIds = isRowSelected ? _xor(previousSelectedIds, [id]) : _uniq([].concat(_toConsumableArray(previousSelectedIds), [id]));
-
       _this.onChange(_objectSpread({}, tableState, {
         selectedIds: selectedIds
       }));
     };
-
     _this.onExpand = function (id) {
       var callback = function callback(_ref5) {
         var isExpanded = _ref5.isExpanded;
@@ -172,20 +138,16 @@ function (_PureComponent) {
           isExpanded: isExpanded
         });
       };
-
       if (_this.isExpandedRowsControlled()) {
         // $FlowFixMe We know that `this.props.expandedRowKeys` is Array here
         var rowIsExpanded = _this.isRowExpanded(id, _this.props.expandedRowKeys);
-
         callback({
           isExpanded: !rowIsExpanded
         });
         return;
       }
-
       _this.setState(function (s) {
         var rowIsExpanded = _this.isRowExpanded(id, s.expandedRowKeys);
-
         return {
           expandedRowKeys: rowIsExpanded ? s.expandedRowKeys.filter(function (key) {
             return key !== id;
@@ -193,45 +155,36 @@ function (_PureComponent) {
         };
       }, function () {
         var rowIsExpanded = _this.isRowExpanded(id, _this.state.expandedRowKeys);
-
         callback({
           isExpanded: rowIsExpanded
         });
       });
     };
-
     _this.hasRowSelection = function (id) {
       var _this$props$tableStat3 = _this.props.tableState,
-          tableState = _this$props$tableStat3 === void 0 ? {} : _this$props$tableStat3;
+        tableState = _this$props$tableStat3 === void 0 ? {} : _this$props$tableStat3;
       var _tableState$selectedI = tableState.selectedIds,
-          selectedIds = _tableState$selectedI === void 0 ? [] : _tableState$selectedI;
+        selectedIds = _tableState$selectedI === void 0 ? [] : _tableState$selectedI;
       return _findIndex(_equals(id), selectedIds) >= 0;
     };
-
     _this.hasAllRowsSelection = function () {
       var _this$props4 = _this.props,
-          _this$props4$tableSta = _this$props4.tableState,
-          tableState = _this$props4$tableSta === void 0 ? {} : _this$props4$tableSta,
-          data = _this$props4.data;
+        _this$props4$tableSta = _this$props4.tableState,
+        tableState = _this$props4$tableSta === void 0 ? {} : _this$props4$tableSta,
+        data = _this$props4.data;
       var _tableState$selectedI2 = tableState.selectedIds,
-          selectedIds = _tableState$selectedI2 === void 0 ? [] : _tableState$selectedI2;
-
+        selectedIds = _tableState$selectedI2 === void 0 ? [] : _tableState$selectedI2;
       var allIds = _map('id', data);
-
       return !_isEmpty(allIds) && _isEmpty(_xor(selectedIds, allIds));
     };
-
     _this.renderHeader = function () {
       var _this$props5 = _this.props,
-          columns = _this$props5.columns,
-          withSelection = _this$props5.withSelection,
-          renderHeadCell = _this$props5.renderHeadCell,
-          restTableProps = _objectWithoutProperties(_this$props5, ["columns", "withSelection", "renderHeadCell"]);
-
+        columns = _this$props5.columns,
+        withSelection = _this$props5.withSelection,
+        renderHeadCell = _this$props5.renderHeadCell,
+        restTableProps = _objectWithoutProperties(_this$props5, ["columns", "withSelection", "renderHeadCell"]);
       var rest = _omit(TABLE_BUILDER_PROPS, _this.props);
-
       var modifiers = _objectSpread({}, restTableProps, {}, rest);
-
       return ___EmotionJSX(TableHeader, {
         columns: _this.getGridColumns(),
         modifiers: modifiers
@@ -252,21 +205,18 @@ function (_PureComponent) {
         }, renderHeadCell ? renderHeadCell(column) : column.title || '');
       }));
     };
-
     _this.renderBody = function (data) {
       var _this$props6 = _this.props,
-          columns = _this$props6.columns,
-          onActionClick = _this$props6.onActionClick,
-          action = _this$props6.action,
-          withSelection = _this$props6.withSelection,
-          renderCell = _this$props6.renderCell,
-          noData = _this$props6.noData,
-          expandedRowRender = _this$props6.expandedRowRender,
-          loading = _this$props6.loading,
-          condensed = _this$props6.condensed;
-
+        columns = _this$props6.columns,
+        onActionClick = _this$props6.onActionClick,
+        action = _this$props6.action,
+        withSelection = _this$props6.withSelection,
+        renderCell = _this$props6.renderCell,
+        noData = _this$props6.noData,
+        expandedRowRender = _this$props6.expandedRowRender,
+        loading = _this$props6.loading,
+        condensed = _this$props6.condensed;
       var rest = _omit(TABLE_BUILDER_PROPS, _this.props);
-
       return ___EmotionJSX(TableBody, {
         data: data,
         onActionClick: onActionClick,
@@ -276,7 +226,6 @@ function (_PureComponent) {
         modifiers: rest
       }, function (rowData) {
         var rowIsExpanded = _this.isRowExpanded(rowData.id, _this.getExpandedRows());
-
         return ___EmotionJSX(TableBuilderBodyRow, _extends({
           key: rowData.id,
           gridColumns: _this.getGridColumns(),
@@ -293,13 +242,11 @@ function (_PureComponent) {
         }, rest));
       });
     };
-
     _this.renderContent = function () {
       var _this$props7 = _this.props,
-          groupBy = _this$props7.groupBy,
-          data = _this$props7.data,
-          renderGroupTitle = _this$props7.renderGroupTitle;
-
+        groupBy = _this$props7.groupBy,
+        data = _this$props7.data,
+        renderGroupTitle = _this$props7.renderGroupTitle;
       if (data && data.length !== 0 && groupBy && typeof groupBy === 'function') {
         var groupedData = groupBy(data) || {};
         return ___EmotionJSX("div", {
@@ -316,15 +263,12 @@ function (_PureComponent) {
           }, key))), _this.renderBody(groupedData[key]));
         }));
       }
-
       return _this.renderBody(data);
     };
-
     _this.onChangePagination = function (page, pageSize) {
       var _this$props8 = _this.props,
-          onChange = _this$props8.onChange,
-          tableState = _this$props8.tableState;
-
+        onChange = _this$props8.onChange,
+        tableState = _this$props8.tableState;
       if (typeof onChange === 'function') {
         onChange(_objectSpread({}, tableState, {
           pagination: _objectSpread({}, tableState.pagination, {
@@ -334,23 +278,18 @@ function (_PureComponent) {
         }));
       }
     };
-
     _this.getPage = function () {
       return _getOr(1, 'tableState.pagination.page', _this.props);
     };
-
     _this.getPageSize = function () {
       return _getOr(10, 'tableState.pagination.pageSize', _this.props);
     };
-
     _this.getTotal = function () {
       return _getOr(0, 'tableState.pagination.total', _this.props);
     };
-
     _this.renderFooter = function () {
       var withPagination = _this.props.withPagination;
       var footer = null;
-
       if (withPagination && _this.getTotal()) {
         footer = ___EmotionJSX(TableFooter, {
           justifyContent: "center"
@@ -362,13 +301,10 @@ function (_PureComponent) {
           showSizeChanger: true
         }));
       }
-
       return footer;
     };
-
     return _this;
   }
-
   _createClass(TableBuilder, [{
     key: "isExpandedRowsControlled",
     value: function isExpandedRowsControlled() {
@@ -389,16 +325,13 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var rest = _omit(TABLE_BUILDER_PROPS, this.props);
-
       return ___EmotionJSX(Table, {
         modifiers: rest
       }, this.renderHeader(), this.renderContent(), this.renderFooter());
     }
   }]);
-
   return TableBuilder;
 }(PureComponent);
-
 TableBuilder.defaultProps = {
   columns: [],
   data: [],

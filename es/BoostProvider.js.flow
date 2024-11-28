@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { IconsProvider } from './components/Icon/IconsProvider';
 import { ModalProvider } from './components/Modal/ModalProvider';
 import { createTheme, type Theme, Globals } from './theme';

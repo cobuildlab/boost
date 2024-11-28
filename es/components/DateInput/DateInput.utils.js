@@ -8,7 +8,6 @@ export var DATETIME_FORMAT = 'MM/dd/yyyy, hh:mm a';
 export var fromISOToViewFormat = function fromISOToViewFormat(value, dateFormat) {
   if (value) {
     value = DateTime.fromISO(value);
-
     if (value.isValid) {
       value = value.toFormat(dateFormat || DATE_FORMAT);
     } else {
@@ -17,13 +16,11 @@ export var fromISOToViewFormat = function fromISOToViewFormat(value, dateFormat)
   } else {
     value = '';
   }
-
   return value;
 };
 export var fromISOtoJSDate = function fromISOtoJSDate(value) {
   if (value) {
     value = DateTime.fromISO(value);
-
     if (value.isValid) {
       value = value.toJSDate();
     } else {
@@ -32,7 +29,6 @@ export var fromISOtoJSDate = function fromISOtoJSDate(value) {
   } else {
     value = null;
   }
-
   return value;
 };
 export var fromJSDateToISO = function fromJSDateToISO(value, withTime) {
@@ -42,7 +38,6 @@ export var fromJSDateToISO = function fromJSDateToISO(value, withTime) {
   } else {
     value = null;
   }
-
   return value;
 };
 export var fromViewFormatToLuxon = function fromViewFormatToLuxon(value, dateFormat) {
@@ -51,7 +46,6 @@ export var fromViewFormatToLuxon = function fromViewFormatToLuxon(value, dateFor
   } else {
     value = null;
   }
-
   return value;
 };
 export var fromLuxonToISO = function fromLuxonToISO(value, withTime) {
@@ -60,6 +54,5 @@ export var fromLuxonToISO = function fromLuxonToISO(value, withTime) {
   } else {
     value = null;
   }
-
   return value;
 };

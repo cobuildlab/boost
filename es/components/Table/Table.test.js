@@ -16,14 +16,12 @@ describe('<Table />', function () {
     id: '4',
     firstName: 'Laveta'
   }];
-
   var renderTableBody = function renderTableBody(client) {
     return ___EmotionJSX(Table.BodyRow, {
       columns: "repeat(6, 1fr)",
       key: client.id
     }, ___EmotionJSX(Table.BodyCell, null, client.id), ___EmotionJSX(Table.BodyCell, null, client.firstName));
   };
-
   it('should render table', function () {
     var wrapper = mount(___EmotionJSX(BoostProvider, null, ___EmotionJSX(Table, null, ___EmotionJSX(Table.Header, {
       columns: "repeat(6, 1fr)"

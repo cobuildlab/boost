@@ -5,39 +5,29 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
-
-var _class, _temp;
-
+var _class;
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { Manager, Popper, Reference } from 'react-popper';
 import onClickOutside from 'react-onclickoutside';
 import { Portal } from 'react-portal';
 import { TooltipTargetTag, TooltipMessageTag, TooltipArrowTag } from './Tooltip.theme';
-var Tooltip = onClickOutside((_temp = _class =
-/*#__PURE__*/
-function (_React$PureComponent) {
+var Tooltip = onClickOutside((_class = /*#__PURE__*/function (_React$PureComponent) {
   _inherits(Tooltip, _React$PureComponent);
-
   function Tooltip(props) {
     var _this;
-
     _classCallCheck(this, Tooltip);
-
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Tooltip).call(this, props));
-
     _this.openTooltip = function () {
       return _this.setState({
         isOpen: true
       });
     };
-
     _this.closeTooltip = function () {
       return _this.setState({
         isOpen: false
       });
     };
-
     _this.toggleTooltip = function () {
       return _this.setState(function (_ref) {
         var isOpen = _ref.isOpen;
@@ -46,22 +36,18 @@ function (_React$PureComponent) {
         };
       });
     };
-
     _this.handleClickOutside = function (event) {
       _this.closeTooltip();
-
       event.stopPropagation();
     };
-
     _this.renderTooltipMessage = function () {
       var _this$props = _this.props,
-          placement = _this$props.placement,
-          withPortal = _this$props.withPortal,
-          message = _this$props.message,
-          eventsEnabled = _this$props.eventsEnabled,
-          modifiers = _this$props.modifiers,
-          rest = _objectWithoutProperties(_this$props, ["placement", "withPortal", "message", "eventsEnabled", "modifiers"]);
-
+        placement = _this$props.placement,
+        withPortal = _this$props.withPortal,
+        message = _this$props.message,
+        eventsEnabled = _this$props.eventsEnabled,
+        modifiers = _this$props.modifiers,
+        rest = _objectWithoutProperties(_this$props, ["placement", "withPortal", "message", "eventsEnabled", "modifiers"]);
       var isOpen = _this.state.isOpen;
       var PortalCondComponent = withPortal ? Portal : React.Fragment;
       return ___EmotionJSX(PortalCondComponent, null, ___EmotionJSX(Popper, {
@@ -70,9 +56,9 @@ function (_React$PureComponent) {
         modifiers: modifiers
       }, function (_ref2) {
         var ref = _ref2.ref,
-            style = _ref2.style,
-            placement = _ref2.placement,
-            arrowProps = _ref2.arrowProps;
+          style = _ref2.style,
+          placement = _ref2.placement,
+          arrowProps = _ref2.arrowProps;
         return isOpen ? ___EmotionJSX(TooltipMessageTag, {
           modifiers: rest,
           className: "ignore-react-onclickoutside",
@@ -91,29 +77,25 @@ function (_React$PureComponent) {
         })) : null;
       }));
     };
-
     _this.state = {
       isOpen: props.defaultOpen || false
     };
     return _this;
   }
-
   _createClass(Tooltip, [{
     key: "render",
     value: function render() {
       var _this2 = this;
-
       var _this$props2 = this.props,
-          children = _this$props2.children,
-          tagName = _this$props2.tagName,
-          cursor = _this$props2.cursor,
-          placement = _this$props2.placement,
-          message = _this$props2.message,
-          trigger = _this$props2.trigger,
-          eventsEnabled = _this$props2.eventsEnabled,
-          modifiers = _this$props2.modifiers,
-          rest = _objectWithoutProperties(_this$props2, ["children", "tagName", "cursor", "placement", "message", "trigger", "eventsEnabled", "modifiers"]);
-
+        children = _this$props2.children,
+        tagName = _this$props2.tagName,
+        cursor = _this$props2.cursor,
+        placement = _this$props2.placement,
+        message = _this$props2.message,
+        trigger = _this$props2.trigger,
+        eventsEnabled = _this$props2.eventsEnabled,
+        modifiers = _this$props2.modifiers,
+        rest = _objectWithoutProperties(_this$props2, ["children", "tagName", "cursor", "placement", "message", "trigger", "eventsEnabled", "modifiers"]);
       var isOpen = this.state.isOpen;
       var targetTriggerEvents = typeof children === 'function' ? {} : trigger === 'hover' ? {
         onMouseEnter: this.openTooltip,
@@ -141,7 +123,6 @@ function (_React$PureComponent) {
       }));
     }
   }]);
-
   return Tooltip;
 }(React.PureComponent), _class.defaultProps = {
   defaultOpen: false,
@@ -149,5 +130,5 @@ function (_React$PureComponent) {
   trigger: 'hover',
   tagName: 'div',
   cursor: 'default'
-}, _temp));
+}, _class));
 export { Tooltip };

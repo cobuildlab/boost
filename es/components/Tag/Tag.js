@@ -3,13 +3,11 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { TagOuter, TagInner } from './Tag.theme';
-
 var Tag = function Tag(_ref) {
   var children = _ref.children,
-      _ref$condensed = _ref.condensed,
-      condensed = _ref$condensed === void 0 ? false : _ref$condensed,
-      rest = _objectWithoutProperties(_ref, ["children", "condensed"]);
-
+    _ref$condensed = _ref.condensed,
+    condensed = _ref$condensed === void 0 ? false : _ref$condensed,
+    rest = _objectWithoutProperties(_ref, ["children", "condensed"]);
   return ___EmotionJSX(TagOuter, _extends({
     condensed: condensed
   }, rest, {
@@ -18,7 +16,6 @@ var Tag = function Tag(_ref) {
     tagName: "span"
   }, children));
 };
-
 Tag.defaultProps = {
   color: 'PRIMARY'
 };

@@ -3,8 +3,8 @@
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
 import CreatableSelect from 'react-select/creatable';
-import { withTheme } from 'emotion-theming';
-import { css } from '@emotion/core';
+import { withTheme } from '@emotion/react';
+import { css } from '@emotion/react';
 import { type SerializedStyles } from '@emotion/utils';
 import color from 'color';
 

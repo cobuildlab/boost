@@ -3,7 +3,6 @@ import React from 'react';
 import { Icon } from '../Icon';
 import { Column } from '../FlexLayout';
 import { NoDataIconContainerTag, NoDataTextTag } from './NoData.theme';
-
 var NoData = function NoData(props) {
   return ___EmotionJSX(Column, {
     stretch: true,
@@ -21,5 +20,4 @@ var NoData = function NoData(props) {
     modifiers: props
   }, "no data"));
 };
-
 export { NoData };

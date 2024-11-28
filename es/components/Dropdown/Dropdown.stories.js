@@ -1,7 +1,6 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { Dropdown, Button, Icon, Menu, Column, Text, Row } from '../../';
-
 var BodyContent = function BodyContent() {
   return ___EmotionJSX("div", {
     style: {
@@ -9,7 +8,6 @@ var BodyContent = function BodyContent() {
     }
   }, "Body");
 };
-
 export default {
   title: 'Components/Dropdown',
   component: Dropdown

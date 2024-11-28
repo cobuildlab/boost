@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { theme, AvatarsTag, AvatarsHandleTag, AvatarsCounterTag } from './Avatars.theme';
 
 import { Tooltip } from '../Tooltip';

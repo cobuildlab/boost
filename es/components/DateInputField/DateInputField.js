@@ -4,18 +4,15 @@ import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { DateInput } from '../DateInput';
 import { FormField } from '../Form/FormField';
-
 function DateInputField(_ref) {
   var label = _ref.label,
-      input = _ref.input,
-      meta = _ref.meta,
-      rest = _objectWithoutProperties(_ref, ["label", "input", "meta"]);
-
+    input = _ref.input,
+    meta = _ref.meta,
+    rest = _objectWithoutProperties(_ref, ["label", "input", "meta"]);
   var _ref2 = input || {},
-      name = _ref2.name,
-      value = _ref2.value,
-      onChange = _ref2.onChange;
-
+    name = _ref2.name,
+    value = _ref2.value,
+    onChange = _ref2.onChange;
   return ___EmotionJSX(FormField, {
     label: label,
     input: input,
@@ -26,5 +23,4 @@ function DateInputField(_ref) {
     onChange: onChange
   })));
 }
-
 export { DateInputField };

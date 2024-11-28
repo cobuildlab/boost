@@ -36,15 +36,12 @@ describe('<SelectField />', function () {
       placeholder: placeholder,
       options: options
     })));
-
     var _wrapper$find$props = wrapper.find(Select).props(),
-        onChange = _wrapper$find$props.onChange,
-        passedSelectProps = _objectWithoutProperties(_wrapper$find$props, ["onChange"]);
-
+      onChange = _wrapper$find$props.onChange,
+      passedSelectProps = _objectWithoutProperties(_wrapper$find$props, ["onChange"]);
     var _wrapper$find$props2 = wrapper.find(FormField).props(),
-        children = _wrapper$find$props2.children,
-        passedFormFieldProps = _objectWithoutProperties(_wrapper$find$props2, ["children"]);
-
+      children = _wrapper$find$props2.children,
+      passedFormFieldProps = _objectWithoutProperties(_wrapper$find$props2, ["children"]);
     expect(passedSelectProps).toEqual({
       clearable: clearable,
       hasError: true,

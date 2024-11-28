@@ -8,8 +8,9 @@ describe('<Modal />', function () {
     // $FlowIgnore
     document.addEventListener = jest.fn(function (event, cb) {
       map[event] = cb;
-    }); // $FlowIgnore
+    });
 
+    // $FlowIgnore
     document.removeEventListener = jest.fn(function (event) {
       map[event] = undefined;
     });
@@ -80,8 +81,8 @@ describe('<Modal />', function () {
   });
   it('should not call onClose callback on escape key with shouldCloseOnEscPress=false', function () {
     var onClose = jest.fn();
-    var map = {}; // $FlowIgnore
-
+    var map = {};
+    // $FlowIgnore
     document.addEventListener = jest.fn(function (event, cb) {
       map[event] = cb;
     });

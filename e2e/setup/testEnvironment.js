@@ -34,7 +34,7 @@ class PuppeteerEnvironment extends NodeEnvironment {
         height: 960,
       },
     });
-    
+
     this.global.__BROWSER_CONTEXT__ = await this.global.__BROWSER__.createIncognitoBrowserContext();
   }
 

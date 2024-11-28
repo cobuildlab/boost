@@ -24,7 +24,6 @@ describe('<Navigation />', function () {
     var Link = function Link() {
       return null;
     };
-
     var wrapper = mount(___EmotionJSX(Navigation, {
       color: "GREEN_40"
     }, ___EmotionJSX(Navigation.Item, {

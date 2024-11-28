@@ -24,11 +24,9 @@ describe('<RadioGroupField />', function () {
       input: input,
       options: options
     }));
-
     var _wrapper$find$props = wrapper.find('FormField').props(),
-        children = _wrapper$find$props.children,
-        formFieldPassedProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
-
+      children = _wrapper$find$props.children,
+      formFieldPassedProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
     expect(formFieldPassedProps).toEqual({
       direction: 'column',
       hideErrorLabel: false,

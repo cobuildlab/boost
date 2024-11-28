@@ -1,4 +1,4 @@
-import serializer from 'jest-emotion';
+import serializer from '@emotion/jest';
 import { configure, shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import enzymeToJson from 'enzyme-to-json';

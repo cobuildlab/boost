@@ -22,8 +22,8 @@ var tabsEnhancer = compose(branch(function (props) {
 })));
 var TabsPlate = tabsEnhancer(function (_ref) {
   var children = _ref.children,
-      onSelect = _ref.onSelect,
-      selectedTabId = _ref.selectedTabId;
+    onSelect = _ref.onSelect,
+    selectedTabId = _ref.selectedTabId;
   var contextData = {
     selectedTabId: selectedTabId,
     onSelect: onSelect
@@ -32,11 +32,9 @@ var TabsPlate = tabsEnhancer(function (_ref) {
     value: contextData
   }, children);
 });
-
 var Tabs = function Tabs(props) {
   return ___EmotionJSX(TabsPlate, props);
 };
-
 Tabs.displayName = 'Tabs';
 Tabs.Title = TabTitle;
 Tabs.Panel = TabPanel;

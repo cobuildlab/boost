@@ -1,6 +1,6 @@
 // @flow
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 const resetStyles = ({ FONTS }: *) => css`
   html {

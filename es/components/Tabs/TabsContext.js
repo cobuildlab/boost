@@ -4,7 +4,6 @@ import React from 'react';
 var TabsContext = React.createContext({
   tabs: {}
 });
-
 var withTabsContext = function withTabsContext(Component) {
   return function (props) {
     return ___EmotionJSX(TabsContext.Consumer, null, function (TabsData) {
@@ -14,5 +13,4 @@ var withTabsContext = function withTabsContext(Component) {
     });
   };
 };
-
 export { TabsContext, withTabsContext };

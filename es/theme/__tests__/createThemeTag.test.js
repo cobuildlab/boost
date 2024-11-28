@@ -30,10 +30,9 @@ describe('createThemeTag', function () {
   };
   it('should create tag with root object and modifeirs', function () {
     var _createThemeTag = createThemeTag('name', themeMock),
-        _createThemeTag2 = _slicedToArray(_createThemeTag, 2),
-        StyledTag = _createThemeTag2[0],
-        theme = _createThemeTag2[1];
-
+      _createThemeTag2 = _slicedToArray(_createThemeTag, 2),
+      StyledTag = _createThemeTag2[0],
+      theme = _createThemeTag2[1];
     var wrapper = render(___EmotionJSX(ThemeProvider, {
       theme: {
         components: theme
@@ -47,19 +46,18 @@ describe('createThemeTag', function () {
   });
   it('should create tag with root function', function () {
     var _createThemeTag3 = createThemeTag('name', function () {
-      return {
-        root: function root(props) {
-          return {
-            height: '10px',
-            gridGap: props.gap
-          };
-        }
-      };
-    }),
-        _createThemeTag4 = _slicedToArray(_createThemeTag3, 2),
-        StyledTag = _createThemeTag4[0],
-        theme = _createThemeTag4[1];
-
+        return {
+          root: function root(props) {
+            return {
+              height: '10px',
+              gridGap: props.gap
+            };
+          }
+        };
+      }),
+      _createThemeTag4 = _slicedToArray(_createThemeTag3, 2),
+      StyledTag = _createThemeTag4[0],
+      theme = _createThemeTag4[1];
     var wrapper = render(___EmotionJSX(ThemeProvider, {
       theme: {
         components: theme
@@ -72,20 +70,19 @@ describe('createThemeTag', function () {
   });
   it('should create tag with custom colors and zisez', function () {
     var _createThemeTag5 = createThemeTag('name', function (_ref) {
-      var COLORS = _ref.COLORS,
+        var COLORS = _ref.COLORS,
           SIZES = _ref.SIZES;
-      return {
-        root: {
-          color: 'black',
-          backgroundColor: COLORS.PRIMARY,
-          height: SIZES.MAIN
-        }
-      };
-    }),
-        _createThemeTag6 = _slicedToArray(_createThemeTag5, 2),
-        StyledTag = _createThemeTag6[0],
-        theme = _createThemeTag6[1];
-
+        return {
+          root: {
+            color: 'black',
+            backgroundColor: COLORS.PRIMARY,
+            height: SIZES.MAIN
+          }
+        };
+      }),
+      _createThemeTag6 = _slicedToArray(_createThemeTag5, 2),
+      StyledTag = _createThemeTag6[0],
+      theme = _createThemeTag6[1];
     var wrapper = render(___EmotionJSX(ThemeProvider, {
       theme: parseThemes({
         COLORS: {

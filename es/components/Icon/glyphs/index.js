@@ -1,7 +1,6 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-
 var Add = function Add(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -9,14 +8,12 @@ var Add = function Add(props) {
     d: "M12 24.003C5.384 24.003 0 18.619 0 12 0 5.384 5.384 0 12 0c6.618 0 12 5.384 12 12.001 0 6.618-5.382 12.002-12 12.002zm0-21.335c-5.147 0-9.333 4.187-9.333 9.333 0 5.147 4.186 9.334 9.333 9.334s9.333-4.187 9.333-9.334c0-5.146-4.186-9.333-9.333-9.333zm4.628 10.445h-3.294v3.295a1.334 1.334 0 0 1-2.668 0v-3.295H7.373a1.333 1.333 0 1 1 0-2.666h3.293V7.152a1.334 1.334 0 1 1 2.668 0v3.295h3.294a1.333 1.333 0 0 1 0 2.666z"
   }));
 };
-
 Add.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var Alert = function Alert(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -34,11 +31,9 @@ var Alert = function Alert(props) {
     y: "25"
   }, "!"))));
 };
-
 Alert.defaultProps = {
   viewBox: "0 0 35 31"
 };
-
 var APIToken = function APIToken(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     strokeWidth: "1.5",
@@ -59,12 +54,10 @@ var APIToken = function APIToken(props) {
     fill: "currentColor"
   })));
 };
-
 APIToken.defaultProps = {
   viewBox: "0 0 20 29",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Calendar = function Calendar(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -78,14 +71,12 @@ var Calendar = function Calendar(props) {
     d: "M18 4.5a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25H5.25A2.25 2.25 0 0 1 3 18V6.75A2.25 2.25 0 0 1 5.25 4.5m3 0H15M6.75 3v3m9.75-3v3M3 8.25h17.25"
   })));
 };
-
 Calendar.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var Camera = function Camera(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     stroke: "currentColor",
@@ -99,7 +90,6 @@ var Camera = function Camera(props) {
     strokeWidth: "2"
   }));
 };
-
 Camera.defaultProps = {
   width: "24",
   height: "24",
@@ -107,7 +97,6 @@ Camera.defaultProps = {
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Check = function Check(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -115,11 +104,9 @@ var Check = function Check(props) {
     d: "M12.845 3.657L11.178 5.35l-5 5.077a1.648 1.648 0 0 1-2.357 0L.488 7.042A1.699 1.699 0 0 1 0 5.846c0-.936.746-1.693 1.666-1.693.461 0 .877.189 1.179.496L5 6.837l3.821-3.881 1.667-1.692a1.648 1.648 0 0 1 1.178-.496c.921 0 1.667.758 1.667 1.692 0 .468-.186.891-.488 1.197z"
   }));
 };
-
 Check.defaultProps = {
   viewBox: "0 0 14 11"
 };
-
 var ChevronDown = function ChevronDown(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -127,14 +114,12 @@ var ChevronDown = function ChevronDown(props) {
     d: "M21.424 9.503l-7.425 7.741c-.65.677-2.78 1.371-4.304-.182l-7.14-7.444a2.033 2.033 0 0 1 0-2.792 1.837 1.837 0 0 1 2.676 0l6.597 6.876 6.811-7.1a1.913 1.913 0 0 1 2.785 0c.768.8.768 2.1 0 2.9z"
   }));
 };
-
 ChevronDown.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var ChevronLeft = function ChevronLeft(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -142,14 +127,12 @@ var ChevronLeft = function ChevronLeft(props) {
     d: "M14.497 21.424l-7.741-7.425c-.677-.65-1.371-2.78.182-4.304l7.444-7.14a2.033 2.033 0 0 1 2.792 0 1.837 1.837 0 0 1 0 2.676l-6.876 6.597 7.1 6.811a1.913 1.913 0 0 1 0 2.785c-.8.768-2.1.768-2.9 0z"
   }));
 };
-
 ChevronLeft.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var ChevronRight = function ChevronRight(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -157,14 +140,12 @@ var ChevronRight = function ChevronRight(props) {
     d: "M9.503 2.576l7.741 7.425c.677.65 1.371 2.78-.182 4.304l-7.444 7.14c-.772.74-2.022.74-2.792 0a1.837 1.837 0 0 1 0-2.676l6.876-6.597-7.1-6.811a1.913 1.913 0 0 1 0-2.785 2.114 2.114 0 0 1 2.9 0z"
   }));
 };
-
 ChevronRight.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var ChevronTop = function ChevronTop(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -172,14 +153,12 @@ var ChevronTop = function ChevronTop(props) {
     d: "M2.576 14.497l7.425-7.741c.65-.677 2.78-1.371 4.304.182l7.14 7.444c.74.772.74 2.022 0 2.792a1.837 1.837 0 0 1-2.676 0l-6.597-6.876-6.811 7.1a1.913 1.913 0 0 1-2.785 0 2.114 2.114 0 0 1 0-2.9z"
   }));
 };
-
 ChevronTop.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var CloudDatabase = function CloudDatabase(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -212,14 +191,12 @@ var CloudDatabase = function CloudDatabase(props) {
     strokeLinejoin: "round"
   })));
 };
-
 CloudDatabase.defaultProps = {
   width: "24",
   height: "25",
   viewBox: "0 0 24 25",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Contract = function Contract(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -235,33 +212,27 @@ var Contract = function Contract(props) {
     d: "M14.5 11a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 1 0v7a.5.5 0 0 1-.5.5z"
   }));
 };
-
 Contract.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Customers = function Customers(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
     d: "M7.01 15a.498.498 0 0 0 .353-.853l-2-2a.5.5 0 0 0-.707.707l2 2A.502.502 0 0 0 7.01 15zm4.002-4.501a2.722 2.722 0 0 0-2.065-2.645l-1.501-.375-.063-.251c.389-.43.666-.979.781-1.549.267-.138.46-.4.5-.715l.108-.87a.933.933 0 0 0-.405-.89l.025-.531.091-.091c.258-.274.607-.859.055-1.703C8.276.478 7.736 0 6.654 0c-.319 0-1.038 0-1.736.437-2.058.073-2.3 1.182-2.3 2.019 0 .165.03.474.058.732a.94.94 0 0 0-.427.906l.108.87a.915.915 0 0 0 .553.729c.112.545.374 1.073.739 1.492l-.073.294-1.501.375A2.724 2.724 0 0 0 .01 10.5a.498.498 0 0 0 .5.5l10.002-.001a.5.5 0 0 0 .5-.5zm-9.929-.5A1.73 1.73 0 0 1 2.32 8.823l1.792-.448a.502.502 0 0 0 .364-.364l.213-.853a.499.499 0 0 0-.144-.486 2.263 2.263 0 0 1-.689-1.431c-.021-.259-.243-.403-.504-.403l-.129-.796a.498.498 0 0 0 .496-.562 13.611 13.611 0 0 1-.099-1.024c0-.518 0-1.007 1.462-1.022a.5.5 0 0 0 .286-.093C5.844 1 6.392 1 6.655 1c.517 0 .859.139 1.047.426.203.311.12.399.064.46l-.217.217a.499.499 0 0 0-.146.329L7.35 3.52c-.006.136.01.231.103.33.094.099.19.119.326.12l-.064.813a.5.5 0 0 0-.498.46 2.286 2.286 0 0 1-.723 1.459.5.5 0 0 0-.151.493l.204.817c.045.179.184.32.364.364l1.792.448A1.725 1.725 0 0 1 9.937 10l-8.854-.001zm20.842-2.147l-1.501-.375-.063-.251c.389-.43.666-.978.78-1.548a.936.936 0 0 0 .501-.715l.108-.87a.932.932 0 0 0-.406-.89l.025-.53.092-.092c.258-.274.607-.859.054-1.703-.263-.4-.802-.878-1.883-.878-.318 0-1.037 0-1.735.437-2.058.073-2.3 1.182-2.3 2.019 0 .165.03.474.058.732a.933.933 0 0 0-.428.906l.109.87a.915.915 0 0 0 .553.729 3.32 3.32 0 0 0 .738 1.492l-.073.294-1.501.375a2.723 2.723 0 0 0-2.064 2.646.498.498 0 0 0 .5.5l10.001-.003a.5.5 0 0 0 .5-.5 2.722 2.722 0 0 0-2.065-2.645zm-7.863 2.147a1.729 1.729 0 0 1 1.234-1.176l1.792-.448a.499.499 0 0 0 .364-.363l.214-.853a.499.499 0 0 0-.144-.486 2.263 2.263 0 0 1-.689-1.431c-.021-.26-.243-.404-.504-.404l-.129-.796a.498.498 0 0 0 .496-.562 13.611 13.611 0 0 1-.099-1.024c0-.518 0-1.007 1.462-1.022a.5.5 0 0 0 .286-.093C18.821 1 19.369 1 19.632 1c.768 0 .978.321 1.048.426.203.311.12.399.064.459l-.218.217a.501.501 0 0 0-.146.33l-.053 1.088c-.006.136.01.231.104.33.093.099.19.119.326.12l-.065.813a.5.5 0 0 0-.498.461 2.28 2.28 0 0 1-.722 1.458.5.5 0 0 0-.151.493l.204.817c.045.179.184.32.364.364l1.792.448A1.725 1.725 0 0 1 22.915 10l-8.853-.001zm4.094 2.148l-2 2a.5.5 0 0 0 .707.707l2-2a.5.5 0 0 0-.707-.707zm-3.209 8.707l-1.501-.375-.063-.251c.389-.43.666-.979.781-1.549.267-.138.46-.4.5-.715l.108-.87a.933.933 0 0 0-.405-.89l.025-.531.091-.091c.258-.274.607-.859.055-1.703-.262-.401-.802-.879-1.884-.879-.319 0-1.038 0-1.736.437-2.058.073-2.3 1.182-2.3 2.019 0 .165.03.474.058.732a.94.94 0 0 0-.427.906l.108.87a.915.915 0 0 0 .553.729c.112.545.374 1.073.739 1.492l-.073.294-1.501.375A2.724 2.724 0 0 0 6.01 23.5a.498.498 0 0 0 .5.5l10.002-.001a.5.5 0 0 0 .5-.5 2.722 2.722 0 0 0-2.065-2.645zm-7.864 2.145a1.73 1.73 0 0 1 1.237-1.176l1.792-.448a.502.502 0 0 0 .364-.364l.213-.853a.499.499 0 0 0-.144-.486 2.263 2.263 0 0 1-.689-1.431c-.021-.259-.243-.403-.504-.403l-.129-.796a.498.498 0 0 0 .496-.562 13.611 13.611 0 0 1-.099-1.024c0-.518 0-1.007 1.462-1.022a.5.5 0 0 0 .286-.093C11.844 14 12.392 14 12.655 14c.517 0 .859.139 1.047.426.203.311.12.399.064.46l-.217.217a.499.499 0 0 0-.146.329l-.053 1.088c-.006.136.01.231.103.33.094.099.19.119.326.12l-.064.813a.5.5 0 0 0-.498.46 2.286 2.286 0 0 1-.723 1.459.5.5 0 0 0-.151.493l.204.817c.045.179.184.32.364.364l1.792.448A1.725 1.725 0 0 1 15.937 23l-8.854-.001z"
   }));
 };
-
 Customers.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Database = function Database(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
     d: "M12 0C6.393 0 2 1.977 2 4.5v15C2 22.023 6.393 24 12 24s10-1.977 10-4.5v-15C22 1.977 17.607 0 12 0zm9 14.5c0 1.655-3.696 3.5-9 3.5s-9-1.845-9-3.5v-3.018C4.603 12.984 7.985 14 12 14s7.397-1.016 9-2.518V14.5zm0-5c0 1.655-3.696 3.5-9 3.5s-9-1.845-9-3.5V6.482C4.603 7.984 7.985 9 12 9s7.397-1.016 9-2.518V9.5zM12 1c5.304 0 9 1.845 9 3.5S17.304 8 12 8 3 6.155 3 4.5 6.696 1 12 1zm0 22c-5.304 0-9-1.845-9-3.5v-3.018C4.603 17.984 7.985 19 12 19s7.397-1.016 9-2.518V19.5c0 1.655-3.696 3.5-9 3.5z"
   }));
 };
-
 Database.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var DataBuilder = function DataBuilder(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -294,14 +265,12 @@ var DataBuilder = function DataBuilder(props) {
     strokeLinejoin: "round"
   })));
 };
-
 DataBuilder.defaultProps = {
   width: "24",
   height: "25",
   viewBox: "0 0 24 25",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var DataRelation = function DataRelation(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -318,24 +287,20 @@ var DataRelation = function DataRelation(props) {
     d: "M8.804 16.223v5.303c0 .85-1.635 1.474-3.652 1.474-2.017 0-3.652-.624-3.652-1.474v-5.303M5.152 12V7.417a1.83 1.83 0 0 1 1.826-1.834h4.565l-.913-.916.913.916-.913.917m8.218 6.417V17.5a1.83 1.83 0 0 1-1.826 1.833h-4.565l.913.917-.913-.917.913-.916"
   })));
 };
-
 DataRelation.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var Delete = function Delete(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M11.707 10.293L16 6l1.414 1.414-4.293 4.293L17.414 16 16 17.414l-4.293-4.293-4.293 4.293L6 16l4.293-4.293L6 7.414 7.414 6l4.293 4.293z",
     fill: "currentColor"
   }));
 };
-
 Delete.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Diagram = function Diagram(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -379,14 +344,12 @@ var Diagram = function Diagram(props) {
     strokeLinecap: "square"
   }))));
 };
-
 Diagram.defaultProps = {
   width: "23",
   height: "25",
   viewBox: "0 0 23 25",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Discord = function Discord(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "currentColor",
@@ -397,23 +360,19 @@ var Discord = function Discord(props) {
     d: "M18.891 2H5.11C3.946 2 3 2.966 3 4.163v14.196c0 1.197.946 2.163 2.109 2.163h11.664l-.546-1.942 1.317 1.249 1.245 1.176L21 23V4.163C21 2.966 20.054 2 18.891 2zm-3.97 13.713s-.37-.451-.679-.85c1.348-.389 1.862-1.25 1.862-1.25a5.842 5.842 0 0 1-1.183.62 6.666 6.666 0 0 1-1.491.451 7.06 7.06 0 0 1-2.664-.01 8.501 8.501 0 0 1-1.512-.452 5.971 5.971 0 0 1-.751-.357c-.031-.021-.062-.031-.093-.053a.142.142 0 0 1-.04-.031c-.186-.105-.289-.179-.289-.179s.494.84 1.8 1.24c-.308.399-.689.871-.689.871-2.273-.073-3.137-1.596-3.137-1.596 0-3.381 1.481-6.122 1.481-6.122 1.481-1.133 2.89-1.102 2.89-1.102l.103.126c-1.851.546-2.705 1.376-2.705 1.376s.226-.127.607-.305c1.1-.494 1.975-.63 2.335-.662.061-.01.113-.02.175-.02a8.527 8.527 0 0 1 2.077-.022c.977.116 2.027.41 3.096 1.009 0 0-.812-.788-2.56-1.334l.143-.168s1.41-.031 2.89 1.103c0 0 1.482 2.74 1.482 6.121 0 0-.875 1.522-3.148 1.596z"
   })));
 };
-
 Discord.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 };
-
 var DismissData = function DismissData(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
     d: "M13.283 22.743A20.798 20.798 0 0 1 10 23c-5.304 0-9-1.845-9-3.5v-3.018C2.602 17.984 5.985 19 10 19c.524 0 1.035-.021 1.537-.056a.5.5 0 1 0-.068-.998c-.48.033-.968.054-1.469.054-5.304 0-9-1.845-9-3.5v-3.018C2.602 12.984 5.985 14 10 14a21.38 21.38 0 0 0 4.127-.391.5.5 0 1 0-.194-.981A20.328 20.328 0 0 1 10 13c-5.304 0-9-1.845-9-3.5V6.482C2.602 7.984 5.985 9 10 9s7.397-1.016 9-2.518v3.024c-.003.676-.596 1.246-1.095 1.604a.5.5 0 0 0 .584.813c.193-.139.354-.287.511-.435v.092a.5.5 0 0 0 1 0V9.508l.001-.007L20 9.496V4.5C20 1.977 15.607 0 10 0S0 1.977 0 4.5v15C0 22.023 4.393 24 10 24c1.165 0 2.322-.091 3.44-.269a.5.5 0 0 0-.157-.988zM10 1c5.304 0 9 1.845 9 3.5S15.304 8 10 8 1 6.155 1 4.5 4.695 1 10 1zm8.501 12a5.483 5.483 0 0 0-3.879 1.605l-.01.007-.007.01a5.48 5.48 0 0 0-1.604 3.878c0 3.032 2.467 5.5 5.5 5.5 1.51 0 2.88-.613 3.875-1.602.004-.004.01-.005.014-.009.004-.004.005-.01.009-.014a5.483 5.483 0 0 0 1.602-3.875c0-3.032-2.467-5.5-5.5-5.5zm0 10a4.505 4.505 0 0 1-4.5-4.5c0-1.06.384-2.023 1-2.793L21.294 22c-.77.616-1.733 1-2.793 1zm3.5-1.707L15.707 15c.77-.616 1.733-1 2.794-1 2.482 0 4.5 2.019 4.5 4.5 0 1.06-.384 2.023-1 2.793z"
   }));
 };
-
 DismissData.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var EditPencil = function EditPencil(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -428,12 +387,10 @@ var EditPencil = function EditPencil(props) {
     strokeLinejoin: "round"
   })));
 };
-
 EditPencil.defaultProps = {
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var EightBase = function EightBase(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -446,25 +403,21 @@ var EightBase = function EightBase(props) {
     fillRule: "nonzero"
   })));
 };
-
 EightBase.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Environment = function Environment(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M4.164 13.568v4.176c0 1.56 1.176 2.808 2.592 2.808h1.608v1.896H6.828c-2.592 0-4.728-1.824-4.728-4.704v-4.176c0-.624-.672-1.224-1.464-1.224V10.4c.792 0 1.464-.6 1.464-1.224V4.952C2.076 2.072 4.236.272 6.828.272h1.536v1.896H6.756c-1.416 0-2.592 1.224-2.592 2.784v4.224c0 .84-.408 1.8-1.176 2.208.696.384 1.176 1.368 1.176 2.184zM19.836 17.744v-4.176c0-.816.48-1.8 1.176-2.184-.768-.408-1.176-1.368-1.176-2.208V4.952c0-1.56-1.176-2.784-2.592-2.784h-1.608V.272h1.536c2.592 0 4.752 1.8 4.728 4.68v4.224c0 .624.672 1.224 1.464 1.224v1.944c-.792 0-1.464.6-1.464 1.224v4.176c0 2.88-2.136 4.704-4.728 4.704h-1.536v-1.896h1.608c1.416 0 2.592-1.248 2.592-2.808z",
     fill: "currentColor"
   }));
 };
-
 Environment.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Expand = function Expand(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -477,13 +430,11 @@ var Expand = function Expand(props) {
     d: "M1 1l7.7 7.7M6.133 1H1v5.133M1 22.816l7.7-7.7M6.133 22.816H1v-5.133M22.816 1l-7.7 7.7M17.683 1h5.133v5.133M22.816 22.816l-7.7-7.7M17.683 22.816h5.133v-5.133"
   })));
 };
-
 Expand.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var FirewallOn = function FirewallOn(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M11 16a.502.502 0 0 1-.354-.146l-4-4a.5.5 0 0 1 .707-.707L11 14.793l6.646-6.646a.5.5 0 0 1 .707.707l-7 7A.498.498 0 0 1 11 16z",
@@ -493,11 +444,9 @@ var FirewallOn = function FirewallOn(props) {
     fill: "currentColor"
   }));
 };
-
 FirewallOn.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Gear = function Gear(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M11.502 14.913c-2.217 0-4.022-1.756-4.022-3.913s1.805-3.913 4.022-3.913c2.218 0 4.023 1.756 4.023 3.913s-1.805 3.913-4.023 3.913zm7.638-2.933c.042-.32.073-.64.073-.98 0-.34-.031-.66-.073-.98l2.17-1.65a.496.496 0 0 0 .123-.64l-2.056-3.46c-.123-.22-.401-.3-.627-.22l-2.56 1c-.534-.4-1.11-.73-1.737-.98l-.391-2.65a.497.497 0 0 0-.503-.42H9.446a.498.498 0 0 0-.504.42l-.39 2.65c-.627.25-1.203.59-1.737.98l-2.56-1a.507.507 0 0 0-.627.22L1.572 7.73a.483.483 0 0 0 .123.64l2.169 1.65c-.041.32-.072.65-.072.98 0 .33.03.66.072.98l-2.169 1.65a.495.495 0 0 0-.123.64l2.056 3.46c.123.22.4.3.626.22l2.56-1c.535.4 1.11.73 1.738.98l.39 2.65c.032.24.247.42.504.42h4.113c.256 0 .472-.18.503-.42l.39-2.65a7.983 7.983 0 0 0 1.738-.98l2.56 1c.237.09.504 0 .627-.22l2.056-3.46a.496.496 0 0 0-.123-.64l-2.17-1.65z",
@@ -509,13 +458,11 @@ var Gear = function Gear(props) {
     strokeLinejoin: "round"
   }));
 };
-
 Gear.defaultProps = {
   width: "23",
   height: "22",
   viewBox: "0 0 23 22"
 };
-
 var GraphQL = function GraphQL(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -523,22 +470,18 @@ var GraphQL = function GraphQL(props) {
     d: "M13.1 2.7l5 2.9c.2-.2.3-.3.5-.4 1.1-.6 2.4-.2 3 .8.6 1 .3 2.3-.8 2.9-.2.1-.4.2-.6.2v5.7l.6.3c1.1.6 1.4 1.9.8 2.9-.6 1-1.9 1.3-3 .8-.2-.2-.4-.3-.5-.5L13 21.2c.1.2.2.4.2.6 0 1.2-1 2.2-2.2 2.2-1.3 0-2.2-1-2.2-2.2 0-.2 0-.4.1-.6l-5.1-2.8c-.2.1-.3.3-.5.4-1.1.5-2.4.2-3-.8-.6-1-.2-2.3.8-2.9l.6-.3V9.1c-.2 0-.4-.1-.6-.2C0 8.3-.3 7 .3 6c.6-1 1.9-1.4 3-.8.2.1.3.2.5.4l5.1-2.9c-.1-.2-.1-.4-.1-.6C8.8 1 9.7 0 11 0c1.2 0 2.2 1 2.2 2.1 0 .2-.1.5-.1.6zm-.6.9l5.1 2.9c-.2.5-.1 1.1.2 1.6.3.6.8.9 1.4 1v5.7s-.1 0-.1.1L12.5 3.7v-.1zm-3.1.1L2.8 14.9c0-.1 0-.1-.1-.1V9.1c.6-.1 1.1-.4 1.4-1 .3-.5.4-1.1.2-1.6l5.1-2.9v.1zm2.2.5l6.6 11.2c-.2.1-.3.3-.4.4-.1.2-.2.4-.2.6H4.3c0-.2-.1-.4-.2-.6-.1-.1-.2-.3-.4-.4l6.6-11.2c.2 0 .5.1.7.1.2 0 .4-.1.6-.1zm1 16.2l5-2.8v-.2H4.3v.1l5.1 2.9c.4-.5 1-.7 1.6-.7.6 0 1.2.2 1.6.7z"
   }));
 };
-
 GraphQL.defaultProps = {
   viewBox: "0 0 22 24"
 };
-
 var Group = function Group(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M11.914 5c1.378 0 2.5-1.122 2.5-2.5S13.293 0 11.914 0c-1.378 0-2.5 1.122-2.5 2.5s1.122 2.5 2.5 2.5zm0-4c.827 0 1.5.673 1.5 1.5s-.673 1.5-1.5 1.5-1.5-.673-1.5-1.5.674-1.5 1.5-1.5zM19 6c1.378 0 2.5-1.122 2.5-2.5S20.379 1 19 1c-1.378 0-2.5 1.122-2.5 2.5S17.622 6 19 6zm0-4a1.501 1.501 0 1 1-1.5 1.5c0-.827.674-1.5 1.5-1.5zm-2.597 12.237l-.663-5.808C15.583 7.044 14.486 6 13.19 6h-2.553c-1.294 0-2.39 1.044-2.548 2.429l-.663 5.808a1.7 1.7 0 0 0 .411 1.323 1.48 1.48 0 0 0 1.027.505l.552 7.472a.5.5 0 0 0 .498.463h4c.262 0 .48-.202.498-.463l.552-7.472a1.478 1.478 0 0 0 1.027-.505c.318-.355.467-.837.412-1.323zm-1.156.657a.498.498 0 0 1-.366.173H14.5a.5.5 0 0 0-.499.463L13.45 23h-3.071l-.55-7.47a.5.5 0 0 0-.499-.463h-.38a.5.5 0 0 1-.366-.173.699.699 0 0 1-.164-.544l.663-5.808C9.183 7.663 9.852 7 10.639 7h2.553c.786 0 1.455.663 1.556 1.542l.663 5.808a.699.699 0 0 1-.164.544zm8.108-.579l-.641-5.124a2.502 2.502 0 0 0-2.48-2.19h-2.469c-.278 0-.558.049-.833.147a.5.5 0 0 0 .334.942c.167-.059.335-.089.499-.089h2.469c.755 0 1.394.565 1.488 1.314l.641 5.124c.018.144-.025.284-.121.393s-.229.169-.375.169H21.5a.5.5 0 0 0-.499.464l-.467 6.536h-3.069l-.36-5.037a.495.495 0 0 0-.534-.463.5.5 0 0 0-.463.534l.393 5.501c.02.261.238.464.499.464h4a.5.5 0 0 0 .498-.463l.467-6.539a1.5 1.5 0 0 0 1.39-1.683zm-15.933 2.3a.494.494 0 0 0-.534.463L6.536 22h-3.07L3 15.464A.501.501 0 0 0 2.5 15h-.367c-.146 0-.279-.06-.375-.169s-.139-.248-.121-.393l.641-5.124A1.5 1.5 0 0 1 3.766 8h2.469c.112 0 .231.017.377.056a.5.5 0 0 0 .254-.968A2.46 2.46 0 0 0 6.234 7H3.766a2.503 2.503 0 0 0-2.48 2.19l-.641 5.124a1.501 1.501 0 0 0 1.39 1.683l.467 6.539A.5.5 0 0 0 3 23h4a.5.5 0 0 0 .499-.464l.385-5.387a.5.5 0 0 0-.462-.534zM5 6c1.378 0 2.5-1.122 2.5-2.5S6.379 1 5 1C3.622 1 2.5 2.122 2.5 3.5S3.622 6 5 6zm0-4a1.501 1.501 0 1 1-1.5 1.5C3.5 2.673 4.174 2 5 2z",
     fill: "currentColor"
   }));
 };
-
 Group.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var HelpCenter = function HelpCenter(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     transform: "translate(1 1)",
@@ -556,13 +499,11 @@ var HelpCenter = function HelpCenter(props) {
     fill: "currentColor"
   })));
 };
-
 HelpCenter.defaultProps = {
   width: "22",
   height: "22",
   viewBox: "0 0 22 22"
 };
-
 var Home = function Home(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M10.309 1.958l-8.892 8.873h1.67v10h5.01v-7.5h5.846v7.5h5.011v-10h1.671l-8.892-8.873a1.009 1.009 0 0 0-.711-.294h-.002c-.266 0-.523.106-.711.294z",
@@ -574,35 +515,29 @@ var Home = function Home(props) {
     strokeLinejoin: "round"
   }));
 };
-
 Home.defaultProps = {
   width: "22",
   height: "22",
   viewBox: "0 0 22 22"
 };
-
 var House = function House(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
     d: "M23.854 11.138L13.206.491c-.643-.644-1.767-.645-2.413 0L.146 11.138a.499.499 0 0 0 .354.854H2v11.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5v-8.5h6v8.5a.5.5 0 0 0 .5.5h6c.276 0 .5-.224.499-.5v-11.5h1.5a.5.5 0 0 0 .355-.854zm-2.354-.146a.5.5 0 0 0-.5.5v11.5h-4.999v-8.5a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5v8.5h-5v-11.5a.5.5 0 0 0-.5-.5h-.793l9.793-9.793a.728.728 0 0 1 .999 0l9.793 9.793H21.5z"
   }));
 };
-
 House.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Lock = function Lock(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M18.5 10.051V6.5C18.5 2.916 15.584 0 12 0S5.5 2.916 5.5 6.5v3.551c-1.14.232-2 1.243-2 2.449v9C3.5 22.878 4.621 24 6 24h12c1.379 0 2.5-1.122 2.5-2.5v-9c0-1.207-.86-2.217-2-2.449zM6.5 6.5C6.5 3.467 8.968 1 12 1s5.5 2.467 5.5 5.5V10h-1V6.5C16.5 4.019 14.481 2 12 2S7.5 4.019 7.5 6.5V10h-1V6.5zm9 0V10h-7V6.5C8.5 4.57 10.07 3 12 3s3.5 1.57 3.5 3.5zm4 15c0 .827-.673 1.5-1.5 1.5H6c-.827 0-1.5-.673-1.5-1.5v-9c0-.827.673-1.5 1.5-1.5h12c.827 0 1.5.673 1.5 1.5v9zM12 13a2.503 2.503 0 0 0-2.5 2.5c0 .95.555 1.813 1.391 2.231l-.386 2.699A.497.497 0 0 0 11 21h2a.503.503 0 0 0 .495-.571l-.386-2.699A2.508 2.508 0 0 0 14.5 15.5c0-1.378-1.121-2.5-2.5-2.5zm.418 3.931a.501.501 0 0 0-.354.551l.36 2.518h-.848l.36-2.518a.5.5 0 0 0-.354-.551A1.485 1.485 0 0 1 10.5 15.5c0-.827.673-1.5 1.5-1.5s1.5.673 1.5 1.5c0 .667-.435 1.242-1.082 1.431z",
     fill: "currentColor"
   }));
 };
-
 Lock.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Logic = function Logic(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -646,14 +581,12 @@ var Logic = function Logic(props) {
     strokeLinecap: "square"
   }))));
 };
-
 Logic.defaultProps = {
   width: "23",
   height: "25",
   viewBox: "0 0 23 25",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Mail = function Mail(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M21.5 20h-19A2.503 2.503 0 0 1 0 17.5v-11C0 5.122 1.122 4 2.5 4h19C22.878 4 24 5.122 24 6.5v11c0 1.378-1.122 2.5-2.5 2.5zM2.5 5C1.673 5 1 5.673 1 6.5v11c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-11c0-.827-.673-1.5-1.5-1.5h-19z",
@@ -663,18 +596,15 @@ var Mail = function Mail(props) {
     fill: "currentColor"
   }));
 };
-
 Mail.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Man = function Man(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M1.998 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm5.945 5.275l-.72-1.445A1.5 1.5 0 0 0 5.878 5h-3.76a1.5 1.5 0 0 0-1.345.83l-.72 1.445A.5.5 0 0 0 .498 8h7a.5.5 0 0 0 .445-.725z",
     fill: "#323C47"
   }));
 };
-
 Man.defaultProps = {
   width: "8",
   height: "8",
@@ -682,7 +612,6 @@ Man.defaultProps = {
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var MapPin = function MapPin(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M12 14c-3.032 0-5.5-2.467-5.5-5.5S8.968 3 12 3s5.5 2.467 5.5 5.5S15.032 14 12 14zm0-10C9.519 4 7.5 6.019 7.5 8.5S9.519 13 12 13s4.5-2.019 4.5-4.5S14.481 4 12 4z",
@@ -695,11 +624,9 @@ var MapPin = function MapPin(props) {
     fill: "currentColor"
   }));
 };
-
 MapPin.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Minus = function Minus(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("rect", {
     fill: "currentColor",
@@ -711,14 +638,12 @@ var Minus = function Minus(props) {
     transform: "translate(0 4)"
   }));
 };
-
 Minus.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "12",
   height: "12",
   viewBox: "0 0 12 12"
 };
-
 var More = function More(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -726,14 +651,12 @@ var More = function More(props) {
     d: "M5.372 10a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm8.616 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4.64-2a2 2 0 1 1 .001 4 2 2 0 0 1 0-4z"
   }));
 };
-
 More.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var MoreVertical = function MoreVertical(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -741,36 +664,30 @@ var MoreVertical = function MoreVertical(props) {
     d: "M10 18.628a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm2-8.616a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-2-4.64a2 2 0 1 1 4-.001 2 2 0 0 1-4 0z"
   }));
 };
-
 MoreVertical.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
 };
-
 var PaperClip = function PaperClip(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M6.5 23h-4A2.503 2.503 0 0 1 0 20.5v-4c0-1.423.554-2.761 1.561-3.768l9.586-9.586a.5.5 0 0 1 .707.707l-9.586 9.586A4.3 4.3 0 0 0 1 16.5v4c0 .827.673 1.5 1.5 1.5h4a4.3 4.3 0 0 0 3.061-1.268L22.086 8.207C22.675 7.618 23 6.833 23 6s-.325-1.618-.914-2.207l-.879-.879c-1.179-1.179-3.235-1.179-4.414 0L5.561 14.146c-.357.357-.561.85-.561 1.354v2a.5.5 0 0 0 .5.5h2c.504 0 .997-.204 1.354-.561l8.293-8.293a.5.5 0 0 1 .707.707l-8.293 8.293A2.935 2.935 0 0 1 7.5 19h-2c-.827 0-1.5-.673-1.5-1.5v-2c0-.767.311-1.518.854-2.061L16.086 2.207C16.864 1.429 17.899 1 19 1s2.136.429 2.914 1.207l.879.879C23.571 3.864 24 4.899 24 6s-.429 2.136-1.207 2.914L10.268 21.439A5.293 5.293 0 0 1 6.5 23z",
     fill: "currentColor"
   }));
 };
-
 PaperClip.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Planet = function Planet(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M19.776 4.224A10.918 10.918 0 0 0 12 1a10.918 10.918 0 0 0-7.776 3.224A10.945 10.945 0 0 0 1 12c0 2.936 1.145 5.702 3.224 7.776A10.945 10.945 0 0 0 12 23c2.936 0 5.702-1.145 7.776-3.224A10.945 10.945 0 0 0 23 12c0-2.936-1.145-5.702-3.224-7.776zm2.227 7.282h-4.265c-.04-1.697-.278-3.331-.696-4.782a10.909 10.909 0 0 0 2.267-1.562 9.99 9.99 0 0 1 2.694 6.344zm-9.51.988h4.262c-.036 1.562-.252 3.057-.624 4.395a11.105 11.105 0 0 0-3.637-.79v-3.605zM18.6 4.475c-.575.507-1.203.938-1.868 1.298-.17-.476-.363-.925-.579-1.347-.426-.844-.911-1.536-1.446-2.066A9.972 9.972 0 0 1 18.6 4.475zM12.494 2.14c1.028.23 1.998 1.177 2.78 2.721.21.418.399.862.565 1.334a10.076 10.076 0 0 1-3.345.75V2.14zm3.641 5.002c.368 1.329.58 2.815.615 4.369h-4.256V7.937a11.11 11.11 0 0 0 3.641-.795zm-4.629 4.364h-4.26c.035-1.553.246-3.04.614-4.368 1.15.466 2.38.736 3.642.79v3.578h.004zm.005-9.366v4.804a10.05 10.05 0 0 1-3.345-.75c.166-.47.354-.915.565-1.333.782-1.544 1.751-2.492 2.78-2.72zm-2.214.22c-.534.53-1.019 1.226-1.446 2.066-.21.422-.404.87-.579 1.347-.664-.36-1.288-.79-1.868-1.298A9.972 9.972 0 0 1 9.297 2.36zM4.695 5.162c.696.62 1.455 1.14 2.267 1.562-.417 1.455-.66 3.085-.695 4.782H2a9.99 9.99 0 0 1 2.694-6.344zm-2.694 7.332h4.266c.04 1.71.282 3.35.704 4.808a10.81 10.81 0 0 0-2.258 1.554 9.974 9.974 0 0 1-2.712-6.362zm3.421 7.049a10.04 10.04 0 0 1 1.86-1.289c.17.463.358.907.57 1.32.426.844.91 1.536 1.445 2.07a10.021 10.021 0 0 1-3.875-2.101zm6.089 2.317c-1.029-.23-1.998-1.177-2.78-2.721a11.54 11.54 0 0 1-.556-1.307 9.91 9.91 0 0 1 3.336-.745v4.773zm-3.637-4.97c-.373-1.339-.588-2.834-.624-4.396h4.26v3.605a10.88 10.88 0 0 0-3.636.79zm4.624 4.97v-4.773a10.02 10.02 0 0 1 3.336.745c-.166.463-.35.898-.556 1.307-.782 1.544-1.751 2.492-2.78 2.72zm2.214-.22c.534-.53 1.019-1.226 1.446-2.07.21-.413.4-.858.57-1.32.66.354 1.284.786 1.859 1.288a9.905 9.905 0 0 1-3.875 2.102zm4.588-2.784a10.983 10.983 0 0 0-2.258-1.554c.422-1.459.665-3.102.705-4.808h4.265a10.021 10.021 0 0 1-2.712 6.362z",
     fill: "currentColor"
   }));
 };
-
 Planet.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Plus = function Plus(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     fill: "currentColor",
@@ -778,12 +695,10 @@ var Plus = function Plus(props) {
     d: "M21.318 14.685h-6.633v6.631a2.684 2.684 0 0 1-5.37 0v-6.631h-6.63a2.683 2.683 0 1 1 0-5.367h6.63V2.686a2.685 2.685 0 1 1 5.37 0v6.632h6.633a2.684 2.684 0 0 1 0 5.367z"
   }));
 };
-
 Plus.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 };
-
 var Schema = function Schema(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -804,14 +719,12 @@ var Schema = function Schema(props) {
     strokeWidth: ".9"
   }))));
 };
-
 Schema.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Screens = function Screens(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "currentColor",
@@ -824,23 +737,19 @@ var Screens = function Screens(props) {
     d: "M4.958 8.792a.75.75 0 0 1-1.5 0V6.958a2.583 2.583 0 0 1 2.584-2.583h11a2.583 2.583 0 0 1 2.583 2.583v10.084a2.583 2.583 0 0 1-2.583 2.583h-.917a.75.75 0 1 1 0-1.5h.917c.598 0 1.083-.485 1.083-1.083V6.958c0-.598-.485-1.083-1.083-1.083h-11c-.599 0-1.084.485-1.084 1.083v1.834z"
   })));
 };
-
 Screens.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 };
-
 var Search = function Search(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M23.854 23.146l-7.302-7.302A9.453 9.453 0 0 0 19 9.5C19 4.262 14.738 0 9.5 0S0 4.262 0 9.5 4.262 19 9.5 19c2.44 0 4.66-.932 6.344-2.449l7.302 7.302a.5.5 0 1 0 .708-.707zM9.5 18C4.813 18 1 14.187 1 9.5S4.813 1 9.5 1 18 4.813 18 9.5 14.187 18 9.5 18z",
     fill: "currentColor"
   }));
 };
-
 Search.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Settings = function Settings(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     transform: "translate(0 1)",
@@ -878,14 +787,12 @@ var Settings = function Settings(props) {
     r: "2.5"
   })));
 };
-
 Settings.defaultProps = {
   width: "26",
   height: "24",
   viewBox: "0 0 26 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var SpeedMeter = function SpeedMeter(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M12 23.5C5.659 23.5.5 18.341.5 12S5.659.5 12 .5 23.5 5.659 23.5 12 18.341 23.5 12 23.5zm0-22C6.21 1.5 1.5 6.21 1.5 12S6.21 22.5 12 22.5 22.5 17.79 22.5 12 17.79 1.5 12 1.5z",
@@ -901,11 +808,9 @@ var SpeedMeter = function SpeedMeter(props) {
     fill: "currentColor"
   }));
 };
-
 SpeedMeter.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var Table = function Table(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -920,14 +825,12 @@ var Table = function Table(props) {
     d: "M2 19h20V5H2zM2 7.8h20M2 11.533h20M2 15.267h20M8.957 7.8V19M15.043 7.8V19"
   }))));
 };
-
 Table.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Tables = function Tables(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("g", {
     fill: "none",
@@ -942,14 +845,12 @@ var Tables = function Tables(props) {
     fillRule: "nonzero"
   })));
 };
-
 Tables.defaultProps = {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-
 var Trashcan = function Trashcan(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M20.5 6h-17a.5.5 0 0 1-.5-.5v-1C3 3.122 4.121 2 5.5 2h2.691l.309-.618A2.486 2.486 0 0 1 10.736 0h2.527c.953 0 1.81.529 2.236 1.382l.31.618H18.5C19.879 2 21 3.122 21 4.5v1a.5.5 0 0 1-.5.5zM4 5h16v-.5c0-.827-.673-1.5-1.5-1.5h-3a.5.5 0 0 1-.447-.276l-.447-.895A1.493 1.493 0 0 0 13.264 1h-2.527a1.49 1.49 0 0 0-1.342.829l-.448.895A.5.5 0 0 1 8.5 3h-3C4.673 3 4 3.673 4 4.5V5z",
@@ -962,11 +863,9 @@ var Trashcan = function Trashcan(props) {
     fill: "currentColor"
   }));
 };
-
 Trashcan.defaultProps = {
   viewBox: "0 0 24 24"
 };
-
 var TreeView = function TreeView(props) {
   return ___EmotionJSX("svg", props, ___EmotionJSX("path", {
     d: "M21.5.5h-19A2.503 2.503 0 0 0 0 3v18c0 1.378 1.121 2.5 2.5 2.5h19c1.379 0 2.5-1.122 2.5-2.5V3C24 1.622 22.879.5 21.5.5zm-19 1h19c.827 0 1.5.673 1.5 1.5v1.5H1V3c0-.827.673-1.5 1.5-1.5zm19 21h-19c-.827 0-1.5-.673-1.5-1.5V5.5h22V21c0 .827-.673 1.5-1.5 1.5z"
@@ -986,7 +885,6 @@ var TreeView = function TreeView(props) {
     d: "M9.5 12.5h-2a.5.5 0 0 0-.5.5v.5H6v-3h.5A.5.5 0 0 0 7 10V8a.5.5 0 0 0-.5-.5h-2A.5.5 0 0 0 4 8v2a.5.5 0 0 0 .5.5H5V19a.5.5 0 0 0 .5.5H7v.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5v.5H6v-4h1v.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5zM5 8.5h1v1H5v-1zm3 10h1v1H8v-1zm1-4H8v-1h1v1zM9.5 9.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0 0 1zM19.5 13.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zM19.5 18.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z"
   }));
 };
-
 TreeView.defaultProps = {
   viewBox: "0 0 24 24"
 };

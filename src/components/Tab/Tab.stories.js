@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { Tab, Row } from '../../';
 
 export default {

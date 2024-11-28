@@ -1,7 +1,6 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { Modal, ModalContext, Button } from '../../';
-
 var CustomBackground = function CustomBackground(_ref) {
   var children = _ref.children;
   return ___EmotionJSX("div", {
@@ -11,7 +10,6 @@ var CustomBackground = function CustomBackground(_ref) {
     }
   }, children);
 };
-
 export default {
   title: 'Components/Modal',
   component: Modal

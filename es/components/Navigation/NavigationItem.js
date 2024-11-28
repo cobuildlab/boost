@@ -4,13 +4,11 @@ import React from 'react';
 import { Icon } from '../Icon';
 import { NavigationItemTag, NavigationItemLabel, NavigationItemIcon, NavigationItemLabelPreview } from './Navigation.theme';
 import { COLORS } from '../../theme';
-
 var NavigationItem = function NavigationItem(_ref) {
   var icon = _ref.icon,
-      label = _ref.label,
-      iconSize = _ref.iconSize,
-      rest = _objectWithoutProperties(_ref, ["icon", "label", "iconSize"]);
-
+    label = _ref.label,
+    iconSize = _ref.iconSize,
+    rest = _objectWithoutProperties(_ref, ["icon", "label", "iconSize"]);
   return ___EmotionJSX(NavigationItemTag, rest, ___EmotionJSX(NavigationItemIcon, {
     modifiers: rest
   }, icon === undefined && typeof label === 'string' && label.length > 0 ? ___EmotionJSX(NavigationItemLabelPreview, null, label && label.charAt(0).toUpperCase()) : null, typeof icon === 'string' ? ___EmotionJSX(Icon, {
@@ -22,7 +20,6 @@ var NavigationItem = function NavigationItem(_ref) {
     className: "NavigationItem-label"
   }, label));
 };
-
 NavigationItem.defaultProps = {
   tagName: 'a'
 };

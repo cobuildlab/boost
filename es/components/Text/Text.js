@@ -17,17 +17,14 @@ var TAG_NAMES = {
   h4: 'h4',
   h5: 'h5'
 };
-
 function Text(_ref) {
   var text = _ref.text,
-      children = _ref.children,
-      rest = _objectWithoutProperties(_ref, ["text", "children"]);
-
+    children = _ref.children,
+    rest = _objectWithoutProperties(_ref, ["text", "children"]);
   return ___EmotionJSX(TextTag, _extends({}, rest, {
     tagName: TAG_NAMES[rest.kind || 'body']
   }), children || text);
 }
-
 Text.defaultProps = {
   kind: 'body',
   ellipsis: false

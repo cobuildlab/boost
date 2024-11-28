@@ -12,7 +12,8 @@ globals:
 
 plugins: [
   react-hooks,
-  emotion
+  emotion,
+  "@emotion/",
 ]
 
 rules:
@@ -50,16 +51,17 @@ rules:
   eol-last:  ['warn', 'always']
 
   #badcode
-  no-unused-vars: ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }]
+  no-unused-vars: ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }]
   no-multi-assign: 'error'
   no-extra-semi: 'error'
   semi-style: 'error'
   no-unneeded-ternary: 'error'
   callback-return: 'error'
-  import/no-duplicates: 'error'
+  import/no-duplicates: 'warn'
+  import/first: 'warn'
   no-useless-computed-key: 'error'
-  no-var: 'error'
-  init-declarations: ['error', 'always']
+  no-var: 'warn'
+  init-declarations: ['warn', 'always']
   no-delete-var: 'error'
   no-restricted-globals: ['error']
   no-use-before-define: 'error'
@@ -69,10 +71,9 @@ rules:
   max-len: ['warn', { 'code': 150, 'ignoreComments': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true }]
 
   #es6
-  no-const-assign: 'error'
+  no-const-assign: 'warn'
   object-shorthand: 'error'
   prefer-arrow-callback: 'error'
-  prefer-const: 'error'
   prefer-destructuring: ['error', { 'object': true }]
   prefer-numeric-literals: 'error'
   prefer-rest-params: 'warn'
@@ -107,7 +108,6 @@ rules:
   react/jsx-no-duplicate-props: 'error'
   react/jsx-no-undef: ['warn', { allowGlobals: true }]
   react/jsx-pascal-case: 'warn'
-  react/jsx-tag-spacing: ['warn', 'always' ]
   react/jsx-uses-react: 'warn'
   react/jsx-uses-vars: 'warn'
   react/jsx-wrap-multilines: 'warn'
@@ -121,3 +121,6 @@ rules:
   emotion/no-vanilla: "error"
   emotion/import-from-emotion: "error"
   emotion/styled-import: "error"
+
+  #emotion plugin
+  "@emotion/pkg-renaming": "error"

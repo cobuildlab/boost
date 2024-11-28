@@ -1,11 +1,9 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { InputField, Column, Grid, Icon } from '../../';
-
 var onChange = function onChange() {
   return null;
 };
-
 export default {
   title: 'Components/InputField',
   component: InputField

@@ -93,11 +93,12 @@ describe('<Input />', function () {
         onChange: onChange,
         type: "number",
         hideNumberArrows: false
-      })); // From "" (0) to 1
+      }));
 
+      // From "" (0) to 1
       wrapper.find('Boost(inputArrow)').first().simulate('click');
-      expect(onChange).toHaveBeenCalledWith(1); // From "" (0) to -1
-
+      expect(onChange).toHaveBeenCalledWith(1);
+      // From "" (0) to -1
       wrapper.find('Boost(inputArrow)').last().simulate('click');
       expect(onChange).toHaveBeenCalledWith(-1);
     });

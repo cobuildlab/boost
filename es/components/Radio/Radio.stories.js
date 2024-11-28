@@ -6,37 +6,26 @@ import _inherits from "@babel/runtime/helpers/esm/inherits";
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React, { Component } from 'react';
 import { Radio, Column, Row } from '../../';
-
-var RadioState =
-/*#__PURE__*/
-function (_Component) {
+var RadioState = /*#__PURE__*/function (_Component) {
   _inherits(RadioState, _Component);
-
   function RadioState() {
     var _getPrototypeOf2;
-
     var _this;
-
     _classCallCheck(this, RadioState);
-
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(RadioState)).call.apply(_getPrototypeOf2, [this].concat(args)));
     _this.state = {
       value: 2
     };
-
     _this.changeValue = function (value) {
       return _this.setState({
         value: value
       });
     };
-
     return _this;
   }
-
   _createClass(RadioState, [{
     key: "render",
     value: function render() {
@@ -46,10 +35,8 @@ function (_Component) {
       });
     }
   }]);
-
   return RadioState;
 }(Component);
-
 export default {
   title: 'Components/Radio',
   component: Radio
@@ -76,7 +63,7 @@ common.story = {
 export var button = function button() {
   return ___EmotionJSX(RadioState, null, function (_ref) {
     var value = _ref.value,
-        changeValue = _ref.changeValue;
+      changeValue = _ref.changeValue;
     return ___EmotionJSX(Radio.Group, {
       value: value,
       onChange: changeValue,
@@ -257,7 +244,7 @@ withRowDirection.story = {
 export var withState = function withState() {
   return ___EmotionJSX(RadioState, null, function (_ref2) {
     var value = _ref2.value,
-        changeValue = _ref2.changeValue;
+      changeValue = _ref2.changeValue;
     return ___EmotionJSX(Radio.Group, {
       value: value,
       onChange: changeValue

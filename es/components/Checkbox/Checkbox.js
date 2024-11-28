@@ -7,48 +7,34 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 import React, { PureComponent } from 'react';
 import { Icon } from '../Icon';
 import { CheckboxSquareTag, CheckboxTag, CheckboxWrapperTag, CheckboxTextTag, CheckboxIconTag } from './Checkbox.theme';
-
-var Checkbox =
-/*#__PURE__*/
-function (_PureComponent) {
+var Checkbox = /*#__PURE__*/function (_PureComponent) {
   _inherits(Checkbox, _PureComponent);
-
   function Checkbox() {
     var _getPrototypeOf2;
-
     var _this;
-
     _classCallCheck(this, Checkbox);
-
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Checkbox)).call.apply(_getPrototypeOf2, [this].concat(args)));
     _this.state = {
       iconName: _this.props.indeterminate ? 'Minus' : 'Check'
     };
     _this.inputRef = React.createRef();
-
     _this.onChange = function (event) {
       var checked = event.target.checked;
       var _this$props = _this.props,
-          onChange = _this$props.onChange,
-          disabled = _this$props.disabled;
+        onChange = _this$props.onChange,
+        disabled = _this$props.disabled;
       onChange && !disabled && onChange(checked, event);
     };
-
     return _this;
   }
-
   _createClass(Checkbox, [{
     key: "componentDidMount",
     value: function componentDidMount() {
@@ -65,7 +51,6 @@ function (_PureComponent) {
     key: "handleIndeterminate",
     value: function handleIndeterminate() {
       var inputElement = this.inputRef.current;
-
       if (inputElement) {
         inputElement.indeterminate = this.props.indeterminate;
       }
@@ -74,14 +59,12 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
-          onChange = _this$props2.onChange,
-          label = _this$props2.label,
-          rest = _objectWithoutProperties(_this$props2, ["onChange", "label"]);
-
+        onChange = _this$props2.onChange,
+        label = _this$props2.label,
+        rest = _objectWithoutProperties(_this$props2, ["onChange", "label"]);
       var iconModifiers = _objectSpread({}, rest, {
         isShown: rest.checked || rest.indeterminate
       });
-
       return ___EmotionJSX(CheckboxWrapperTag, _extends({}, rest, {
         tagName: "label"
       }), ___EmotionJSX(CheckboxTag, {
@@ -114,20 +97,16 @@ function (_PureComponent) {
           iconName: 'Minus'
         };
       }
-
       if (props.checked) {
         return {
           iconName: 'Check'
         };
       }
-
       return null;
-    }
+    } // $FlowFixMe
   }]);
-
   return Checkbox;
 }(PureComponent);
-
 Checkbox.defaultProps = {
   checked: false,
   hasError: false,

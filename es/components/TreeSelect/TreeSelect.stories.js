@@ -45,7 +45,7 @@ export var common = function common() {
     value: []
   }, function (_ref) {
     var value = _ref.value,
-        _onChange = _ref.onChange;
+      _onChange = _ref.onChange;
     return ___EmotionJSX(TreeSelect, {
       value: value,
       options: OPTIONS,
@@ -60,7 +60,7 @@ export var common = function common() {
     value: [OPTIONS.children[1].value, OPTIONS.children[2].value, OPTIONS.children[0].children[0].value]
   }, function (_ref3) {
     var value = _ref3.value,
-        _onChange2 = _ref3.onChange;
+      _onChange2 = _ref3.onChange;
     return ___EmotionJSX(TreeSelect, {
       value: value,
       options: OPTIONS,
@@ -75,7 +75,7 @@ export var common = function common() {
     value: [LONG_OPTIONS[0].value, LONG_OPTIONS[2].value]
   }, function (_ref5) {
     var value = _ref5.value,
-        _onChange3 = _ref5.onChange;
+      _onChange3 = _ref5.onChange;
     return ___EmotionJSX(TreeSelect, {
       value: value,
       options: LONG_OPTIONS,

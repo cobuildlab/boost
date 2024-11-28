@@ -2,7 +2,7 @@
 
 import React from 'react';
 import memoize from 'lodash/memoize';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import { Select } from '../Select';
 import { Button } from '../Button';

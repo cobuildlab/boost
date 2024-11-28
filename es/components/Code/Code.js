@@ -8,84 +8,64 @@ import { jsx as ___EmotionJSX } from "@emotion/core";
 import React, { PureComponent } from 'react';
 import { CodeNumberPlateTag, CodeWrapperTag, CodeBodyTag, CodeNumericTag, CodePlateTag, CodeLineCounterTag, CodeBodyWrapperTag, CodeNumberWrapperTag, CodeCopyButtonWrapper } from './Code.theme';
 import { Button } from '../Button';
-
-var Code =
-/*#__PURE__*/
-function (_PureComponent) {
+var Code = /*#__PURE__*/function (_PureComponent) {
   _inherits(Code, _PureComponent);
-
   function Code() {
     var _getPrototypeOf2;
-
     var _this;
-
     _classCallCheck(this, Code);
-
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Code)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
     _this.setNumbersRef = function (ref) {
       return _this.numbersRef = ref;
     };
-
     _this.setBodyRef = function (ref) {
       return _this.bodyRef = ref;
     };
-
     _this.onBodyScroll = function () {
       _this.numbersRef.scrollTop = _this.bodyRef.scrollTop;
     };
-
     _this.getLinesCount = function (codeText) {
       return typeof codeText === 'string' ? codeText.replace(/\n$/, '').split(/\r\n|\r|\n/).length : 0;
     };
-
     _this.renderNumbs = function () {
       var linesCount = _this.getLinesCount(_this.props.children);
-
       var counters = [];
-
       for (var index = 0; index < linesCount; index++) {
         counters.push(___EmotionJSX(CodeLineCounterTag, {
           key: index + 1
         }, index + 1));
       }
-
       return counters;
     };
-
     _this.handleCopyButtonClick = function () {
       var tempTextarea = document.createElement('TEXTAREA');
-      var lastFocusedElement = document.activeElement; // $FlowIgnore
+      var lastFocusedElement = document.activeElement;
 
-      tempTextarea.value = _this.bodyRef.innerText; // $FlowIgnore
-
-      document.body.appendChild(tempTextarea); // $FlowIgnore
-
+      // $FlowIgnore
+      tempTextarea.value = _this.bodyRef.innerText;
+      // $FlowIgnore
+      document.body.appendChild(tempTextarea);
+      // $FlowIgnore
       tempTextarea.select();
-      document.execCommand('copy'); // $FlowIgnore
-
+      document.execCommand('copy');
+      // $FlowIgnore
       document.body.removeChild(tempTextarea);
-
       if (lastFocusedElement) {
         lastFocusedElement.focus();
       }
     };
-
     return _this;
   }
-
   _createClass(Code, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          children = _this$props.children,
-          withCopyButton = _this$props.withCopyButton,
-          rest = _objectWithoutProperties(_this$props, ["children", "withCopyButton"]);
-
+        children = _this$props.children,
+        withCopyButton = _this$props.withCopyButton,
+        rest = _objectWithoutProperties(_this$props, ["children", "withCopyButton"]);
       return ___EmotionJSX(CodeWrapperTag, rest, ___EmotionJSX(CodePlateTag, null, ___EmotionJSX(CodeNumberWrapperTag, {
         modifiers: rest
       }, ___EmotionJSX(CodeNumberPlateTag, {
@@ -107,8 +87,6 @@ function (_PureComponent) {
       }, "Copy")) : null));
     }
   }]);
-
   return Code;
 }(PureComponent);
-
 export { Code };

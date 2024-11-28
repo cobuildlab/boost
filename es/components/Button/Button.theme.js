@@ -1,22 +1,16 @@
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  from { transform: rotate(0deg)   }\n  to   { transform: rotate(360deg) }\n"]);
-
   _templateObject = function _templateObject() {
     return data;
   };
-
   return data;
 }
-
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import { createThemeTag } from '../../theme/createThemeTag';
 var BUTTON_HEIGHT_BY_SIZE = {
   sm: '36px',
@@ -25,22 +19,17 @@ var BUTTON_HEIGHT_BY_SIZE = {
 };
 var name = 'button';
 var spinner = keyframes(_templateObject());
-
 var getLoading = function getLoading(props, COLORS) {
   var color = COLORS.WHITE;
-
   if (props.color === 'warning') {
     color = COLORS.GRAY_60;
   }
-
   if (props.color === 'neutral') {
     color = COLORS.PRIMARY_BORDER_COLOR;
   }
-
   if (props.variant === 'ghost' || props.variant === 'outlined') {
     color = COLORS.PRIMARY_BORDER_COLOR;
   }
-
   return props.loading ? {
     '&:after': {
       content: '""',
@@ -60,7 +49,6 @@ var getLoading = function getLoading(props, COLORS) {
     }
   } : {};
 };
-
 var getSquaredStyle = function getSquaredStyle(props) {
   if (props.squared && props.size) {
     return {
@@ -69,13 +57,10 @@ var getSquaredStyle = function getSquaredStyle(props) {
       height: BUTTON_HEIGHT_BY_SIZE[props.size]
     };
   }
-
   return {};
 };
-
 var boxShadowHover = '0 2px 4px 0 rgba(50,50,93,0.2)';
 var boxShadowFocus = 'inset 0 1px 3px 0 rgba(50,50,93,0.14), inset 0 4px 6px 0 rgba(51,80,107,0.08)';
-
 var getLinkStyles = function getLinkStyles(props) {
   if (props.variant === 'link') {
     return {
@@ -85,10 +70,8 @@ var getLinkStyles = function getLinkStyles(props) {
       height: 'auto !important'
     };
   }
-
   return {};
 };
-
 var getSizeStyles = function getSizeStyles(props) {
   if (props.variant === 'link') {
     switch (props.size) {
@@ -98,27 +81,23 @@ var getSizeStyles = function getSizeStyles(props) {
           lineHeight: '1.4rem',
           fontWeight: '400'
         };
-
       case 'lg':
       case 'md':
       default:
         return {};
     }
   }
-
   switch (props.size) {
     case 'sm':
       return {
         height: BUTTON_HEIGHT_BY_SIZE.sm,
         padding: '0 20px'
       };
-
     case 'lg':
       return {
         height: BUTTON_HEIGHT_BY_SIZE.lg,
         padding: '0 48px'
       };
-
     case 'md':
     default:
       return {
@@ -127,7 +106,6 @@ var getSizeStyles = function getSizeStyles(props) {
       };
   }
 };
-
 var getKindStyles = function getKindStyles(props, COLORS) {
   switch (props.variant) {
     case 'ghost':
@@ -143,7 +121,6 @@ var getKindStyles = function getKindStyles(props, COLORS) {
           }
         };
       }
-
     case 'link':
       if (props.disabled) {
         return {
@@ -154,7 +131,6 @@ var getKindStyles = function getKindStyles(props, COLORS) {
           }
         };
       }
-
       if (props.color === 'primary') {
         return {
           color: COLORS.PRIMARY,
@@ -190,9 +166,7 @@ var getKindStyles = function getKindStyles(props, COLORS) {
           }
         };
       }
-
       break;
-
     case 'outlined':
       if (props.disabled) {
         return {
@@ -208,7 +182,6 @@ var getKindStyles = function getKindStyles(props, COLORS) {
           }
         };
       }
-
       if (props.color === 'primary') {
         return {
           backgroundColor: COLORS.WHITE,
@@ -273,9 +246,7 @@ var getKindStyles = function getKindStyles(props, COLORS) {
           }
         };
       }
-
       break;
-
     case 'raised':
     default:
       {
@@ -293,7 +264,6 @@ var getKindStyles = function getKindStyles(props, COLORS) {
             }
           };
         }
-
         if (props.color === 'primary') {
           return {
             backgroundColor: COLORS.PRIMARY,
@@ -373,73 +343,71 @@ var getKindStyles = function getKindStyles(props, COLORS) {
       }
   }
 };
-
 var _createThemeTag = createThemeTag(name, function (_ref) {
-  var COLORS = _ref.COLORS,
+    var COLORS = _ref.COLORS,
       SIZES = _ref.SIZES,
       FONTS = _ref.FONTS;
-  return {
-    root: function root(props) {
-      return _objectSpread({
-        appearance: 'none',
-        outline: 'none',
-        textAlign: 'center',
-        textDecoration: 'none',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        userSelect: 'none',
-        whiteSpace: 'nowrap'
-      }, FONTS.BUTTON, {
-        transition: 'all .15s ease-in-out',
-        cursor: 'pointer',
-        borderRadius: SIZES.MAIN_BORDER_RADIUS,
-        borderStyle: 'solid',
-        borderWidth: '1px'
-      }, getSquaredStyle(props), {}, getLoading(props, COLORS), {}, getLinkStyles(props), {}, getKindStyles(props, COLORS), {}, getSizeStyles(props), {
-        '& > *:not(:last-child)': {
-          marginRight: '8px'
-        }
-      }, props.withIconAutosize ? {
-        '& i': {
-          width: '20px',
-          height: '20px',
-          '&:not(:last-child)': {
+    return {
+      root: function root(props) {
+        return _objectSpread({
+          appearance: 'none',
+          outline: 'none',
+          textAlign: 'center',
+          textDecoration: 'none',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          userSelect: 'none',
+          whiteSpace: 'nowrap'
+        }, FONTS.BUTTON, {
+          transition: 'all .15s ease-in-out',
+          cursor: 'pointer',
+          borderRadius: SIZES.MAIN_BORDER_RADIUS,
+          borderStyle: 'solid',
+          borderWidth: '1px'
+        }, getSquaredStyle(props), {}, getLoading(props, COLORS), {}, getLinkStyles(props), {}, getKindStyles(props, COLORS), {}, getSizeStyles(props), {
+          '& > *:not(:last-child)': {
             marginRight: '8px'
           }
-        }
-      } : {}, {}, props.withIconAutosize && props.variant === 'link' && props.size === 'sm' ? {
-        '& i': {
-          width: '16px',
-          height: '16px',
-          marginRight: '8px'
-        }
-      } : {});
-    },
-    modifiers: {
-      stretch: {
-        width: '100%'
+        }, props.withIconAutosize ? {
+          '& i': {
+            width: '20px',
+            height: '20px',
+            '&:not(:last-child)': {
+              marginRight: '8px'
+            }
+          }
+        } : {}, {}, props.withIconAutosize && props.variant === 'link' && props.size === 'sm' ? {
+          '& i': {
+            width: '16px',
+            height: '16px',
+            marginRight: '8px'
+          }
+        } : {});
       },
-      squared: {
-        padding: '0'
-      },
-      rounded: {
-        borderRadius: '32px',
-        padding: '0 20px'
-      },
-      loading: {
-        color: 'transparent',
-        position: 'relative',
-        pointerEvents: 'none',
-        '& > *': {
-          visibility: 'hidden'
+      modifiers: {
+        stretch: {
+          width: '100%'
+        },
+        squared: {
+          padding: '0'
+        },
+        rounded: {
+          borderRadius: '32px',
+          padding: '0 20px'
+        },
+        loading: {
+          color: 'transparent',
+          position: 'relative',
+          pointerEvents: 'none',
+          '& > *': {
+            visibility: 'hidden'
+          }
         }
       }
-    }
-  };
-}),
-    _createThemeTag2 = _slicedToArray(_createThemeTag, 2),
-    ButtonTag = _createThemeTag2[0],
-    theme = _createThemeTag2[1];
-
+    };
+  }),
+  _createThemeTag2 = _slicedToArray(_createThemeTag, 2),
+  ButtonTag = _createThemeTag2[0],
+  theme = _createThemeTag2[1];
 export { ButtonTag, theme };

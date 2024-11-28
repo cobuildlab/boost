@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { Tooltip, Icon } from '../../';
 
 const anchorCss = css`

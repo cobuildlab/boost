@@ -13,23 +13,20 @@ var CAMERA_ICON_SIZE = {
   xl: '24px',
   xxl: '24px'
 };
-
 var getInitials = function getInitials(firstName, lastName) {
   if (firstName && lastName) return firstName.slice(0, 1) + lastName.slice(0, 1);
   if (firstName && !lastName) return firstName.slice(0, 1);
   if (!firstName && lastName) return lastName.slice(0, 1);
   return DEFAULT_INITIALS;
 };
-
 function Avatar(_ref) {
   var src = _ref.src,
-      firstName = _ref.firstName,
-      lastName = _ref.lastName,
-      onPick = _ref.onPick,
-      pickLabel = _ref.pickLabel,
-      pickVariant = _ref.pickVariant,
-      rest = _objectWithoutProperties(_ref, ["src", "firstName", "lastName", "onPick", "pickLabel", "pickVariant"]);
-
+    firstName = _ref.firstName,
+    lastName = _ref.lastName,
+    onPick = _ref.onPick,
+    pickLabel = _ref.pickLabel,
+    pickVariant = _ref.pickVariant,
+    rest = _objectWithoutProperties(_ref, ["src", "firstName", "lastName", "onPick", "pickLabel", "pickVariant"]);
   var initials = getInitials(firstName, lastName);
   return ___EmotionJSX(AvatarTag, _extends({
     transparent: !!src,
@@ -56,7 +53,6 @@ function Avatar(_ref) {
     customSize: CAMERA_ICON_SIZE[rest.size || 'lg']
   }), ___EmotionJSX("div", null, pickLabel))));
 }
-
 Avatar.defaultProps = {
   size: 'lg',
   variant: 'circle',

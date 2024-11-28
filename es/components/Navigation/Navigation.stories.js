@@ -2,21 +2,17 @@ import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React, { useState } from 'react';
 import { Navigation, Button } from '../../';
-
 var ExpandState = function ExpandState(_ref) {
   var children = _ref.children;
-
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      expanded = _useState2[0],
-      setExpanded = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    expanded = _useState2[0],
+    setExpanded = _useState2[1];
   return children({
     expanded: expanded,
     setExpanded: setExpanded
   });
 };
-
 export default {
   title: 'Components/Navigation',
   component: Navigation
@@ -86,7 +82,7 @@ withoutIcons.story = {
 export var withExpandButton = function withExpandButton() {
   return ___EmotionJSX(ExpandState, null, function (_ref2) {
     var expanded = _ref2.expanded,
-        setExpanded = _ref2.setExpanded;
+      setExpanded = _ref2.setExpanded;
     return ___EmotionJSX(React.Fragment, null, ___EmotionJSX(Button, {
       onClick: function onClick() {
         return setExpanded(!expanded);

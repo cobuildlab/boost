@@ -1,11 +1,10 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { Form, InputField } from '../../';
-
 var FieldMock = function FieldMock(_ref) {
   var Component = _ref.component,
-      label = _ref.label,
-      name = _ref.name;
+    label = _ref.label,
+    name = _ref.name;
   return ___EmotionJSX(Component, {
     label: label,
     input: {
@@ -13,7 +12,6 @@ var FieldMock = function FieldMock(_ref) {
     }
   });
 };
-
 export default {
   title: 'Components/Form',
   component: Form

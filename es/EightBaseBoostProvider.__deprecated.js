@@ -6,17 +6,12 @@ import _inherits from "@babel/runtime/helpers/esm/inherits";
 import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { BoostProvider } from './BoostProvider';
-export var EightBaseBoostProvider =
-/*#__PURE__*/
-function (_React$Component) {
+export var EightBaseBoostProvider = /*#__PURE__*/function (_React$Component) {
   _inherits(EightBaseBoostProvider, _React$Component);
-
   function EightBaseBoostProvider() {
     _classCallCheck(this, EightBaseBoostProvider);
-
     return _possibleConstructorReturn(this, _getPrototypeOf(EightBaseBoostProvider).apply(this, arguments));
   }
-
   _createClass(EightBaseBoostProvider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
@@ -29,6 +24,5 @@ function (_React$Component) {
       return ___EmotionJSX(BoostProvider, this.props);
     }
   }]);
-
   return EightBaseBoostProvider;
 }(React.Component);

@@ -69,8 +69,7 @@ export var common = function common() {
     components: {
       MultiValueLabel: function MultiValueLabel(_ref) {
         var children = _ref.children,
-            props = _objectWithoutProperties(_ref, ["children"]);
-
+          props = _objectWithoutProperties(_ref, ["children"]);
         return ___EmotionJSX(Select.components.MultiValueLabel, props, ___EmotionJSX(Row, null, ___EmotionJSX(Icon, {
           name: "Table",
           size: "sm"

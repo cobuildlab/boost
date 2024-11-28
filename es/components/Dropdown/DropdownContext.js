@@ -6,7 +6,6 @@ var DropdownContext = createContext({
     outsideClickIgnoreClass: ''
   }
 });
-
 var withDropdownContext = function withDropdownContext(Component) {
   return function (props) {
     return ___EmotionJSX(DropdownContext.Consumer, null, function (dropdownData) {
@@ -16,5 +15,4 @@ var withDropdownContext = function withDropdownContext(Component) {
     });
   };
 };
-
 export { DropdownContext, withDropdownContext };

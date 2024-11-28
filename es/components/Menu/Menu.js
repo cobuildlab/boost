@@ -5,11 +5,9 @@ import React from 'react';
 import { Paper } from '../Paper';
 import { MenuItem } from './MenuItem';
 import { MenuTag } from './Menu.theme';
-
 var Menu = function Menu(_ref) {
   var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, ["children"]);
-
+    rest = _objectWithoutProperties(_ref, ["children"]);
   return ___EmotionJSX(Paper, {
     padding: "none",
     borderRadius: "all"
@@ -17,7 +15,6 @@ var Menu = function Menu(_ref) {
     tagName: "div"
   }, rest), children));
 };
-
 Menu.displayName = 'Menu';
 Menu.Item = MenuItem;
 export { Menu };

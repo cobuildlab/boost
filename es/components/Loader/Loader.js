@@ -3,7 +3,6 @@ import { jsx as ___EmotionJSX } from "@emotion/core";
 import React from 'react';
 import { LoaderTag, LoaderWrapperTag, LoaderCircleTag } from './Loader.theme';
 import { COLORS } from '../../theme';
-
 function Loader(props) {
   var uiLoader = ___EmotionJSX(LoaderTag, _extends({}, props, {
     tagName: "div",
@@ -13,16 +12,13 @@ function Loader(props) {
   })), ___EmotionJSX(LoaderCircleTag, _extends({}, props, {
     delay: "0.9s"
   })));
-
   if (props.stretch) {
     return ___EmotionJSX(LoaderWrapperTag, {
       role: "loader"
     }, uiLoader);
   }
-
   return uiLoader;
 }
-
 Loader.defaultProps = {
   stretch: false,
   size: 'md',

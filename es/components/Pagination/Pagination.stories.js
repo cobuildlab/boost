@@ -1,6 +1,6 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
 /* eslint-disable no-alert */
+
 import React from 'react';
 import { Pagination, Column } from '../../';
 export default {

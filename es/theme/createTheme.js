@@ -1,22 +1,16 @@
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 import merge from 'deepmerge';
 import { defaultRawTheme } from './defaultTheme';
-
 var execFunction = function execFunction() {
   var func = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var arg = arguments.length > 1 ? arguments[1] : undefined;
   return typeof func === 'function' ? func(arg) : func;
 };
-
 var mergeComponentRoots = function mergeComponentRoots() {
   var originalRoot = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var extendedRoot = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
   if (typeof originalRoot !== 'function' && typeof extendedRoot !== 'function') {
     return merge(originalRoot, extendedRoot);
   } else {
@@ -26,7 +20,6 @@ var mergeComponentRoots = function mergeComponentRoots() {
     };
   }
 };
-
 var mergeComponentThemes = function mergeComponentThemes() {
   var originalTheme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var extendedTheme = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -36,7 +29,6 @@ var mergeComponentThemes = function mergeComponentThemes() {
     root: root
   });
 };
-
 var parseThemes = function parseThemes(originalRawTheme) {
   var extendedTheme = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var components = originalRawTheme.components;
@@ -55,10 +47,8 @@ var parseThemes = function parseThemes(originalRawTheme) {
     }, {})
   });
 };
-
 var createTheme = function createTheme() {
   var extendTheme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return parseThemes(defaultRawTheme, extendTheme);
 };
-
 export { createTheme, parseThemes };

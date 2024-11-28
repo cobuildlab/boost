@@ -107,7 +107,7 @@ withScroll.story = {
 export var withState = function withState() {
   return ___EmotionJSX(ModalContext.Consumer, null, function (_ref) {
     var openModal = _ref.openModal,
-        closeModal = _ref.closeModal;
+      closeModal = _ref.closeModal;
     return ___EmotionJSX(React.Fragment, null, ___EmotionJSX(Dialog, {
       id: "ID",
       size: "sm",
@@ -116,7 +116,7 @@ export var withState = function withState() {
       }
     }, function (_ref2) {
       var args = _ref2.args,
-          onClose = _ref2.onClose;
+        onClose = _ref2.onClose;
       return ___EmotionJSX(React.Fragment, null, ___EmotionJSX(Dialog.Header, {
         title: "Mark Job as Completed",
         onClose: onClose

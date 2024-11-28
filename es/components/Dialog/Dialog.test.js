@@ -49,11 +49,9 @@ describe('<Dialog />', function () {
       args: args
     };
     var wrapper = shallow(___EmotionJSX(Dialog, modalProps));
-
     var _wrapper$find$props = wrapper.find(Modal).props(),
-        children = _wrapper$find$props.children,
-        passedProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
-
+      children = _wrapper$find$props.children,
+      passedProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
     expect(passedProps).toEqual(modalProps);
   });
   it('should call onClose callback on overlay click', function () {

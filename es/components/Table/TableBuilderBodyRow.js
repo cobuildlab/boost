@@ -8,30 +8,27 @@ import { TableBodyRow } from './TableBodyRow';
 // eslint-disable-next-line prefer-arrow-callback
 var TableBuilderBodyRow = React.memo(function TableBuilderBodyRow(_ref) {
   var gridColumns = _ref.gridColumns,
-      columns = _ref.columns,
-      withSelection = _ref.withSelection,
-      _ref$rowData = _ref.rowData,
-      rowData = _ref$rowData === void 0 ? {} : _ref$rowData,
-      renderCell = _ref.renderCell,
-      isExpanded = _ref.isExpanded,
-      expandedRowRender = _ref.expandedRowRender,
-      onExpand = _ref.onExpand,
-      onSelectRow = _ref.onSelectRow,
-      isSelected = _ref.isSelected,
-      rest = _objectWithoutProperties(_ref, ["gridColumns", "columns", "withSelection", "rowData", "renderCell", "isExpanded", "expandedRowRender", "onExpand", "onSelectRow", "isSelected"]);
-
+    columns = _ref.columns,
+    withSelection = _ref.withSelection,
+    _ref$rowData = _ref.rowData,
+    rowData = _ref$rowData === void 0 ? {} : _ref$rowData,
+    renderCell = _ref.renderCell,
+    isExpanded = _ref.isExpanded,
+    expandedRowRender = _ref.expandedRowRender,
+    onExpand = _ref.onExpand,
+    onSelectRow = _ref.onSelectRow,
+    isSelected = _ref.isSelected,
+    rest = _objectWithoutProperties(_ref, ["gridColumns", "columns", "withSelection", "rowData", "renderCell", "isExpanded", "expandedRowRender", "onExpand", "onSelectRow", "isSelected"]);
   var expandRow = useCallback(function () {
     onExpand && onExpand(rowData.id);
   }, [onExpand, rowData.id]);
   var onChangeSelect = useCallback(function () {
     onSelectRow && onSelectRow(rowData.id);
   }, [onSelectRow, rowData.id]);
-
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      expandRowIsRendered = _useState2[0],
-      setExpandRowIsRendered = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    expandRowIsRendered = _useState2[0],
+    setExpandRowIsRendered = _useState2[1];
   useEffect(function () {
     if (isExpanded) {
       setExpandRowIsRendered(true);

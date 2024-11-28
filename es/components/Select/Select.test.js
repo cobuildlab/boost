@@ -31,18 +31,15 @@ describe('<Select />', function () {
       components: components,
       stretch: stretch
     })));
-
     var _wrapper$find$props = wrapper.find(SelectTag).props(),
-        children = _wrapper$find$props.children,
-        passedStyledProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
-
+      children = _wrapper$find$props.children,
+      passedStyledProps = _objectWithoutProperties(_wrapper$find$props, ["children"]);
     var _wrapper$find$props2 = wrapper.find(ReactSelect).props(),
-        styles = _wrapper$find$props2.styles,
-        menuPortalTarget = _wrapper$find$props2.menuPortalTarget,
-        onChange = _wrapper$find$props2.onChange,
-        valueComponent = _wrapper$find$props2.valueComponent,
-        passedSelectProps = _objectWithoutProperties(_wrapper$find$props2, ["styles", "menuPortalTarget", "onChange", "valueComponent"]);
-
+      styles = _wrapper$find$props2.styles,
+      menuPortalTarget = _wrapper$find$props2.menuPortalTarget,
+      onChange = _wrapper$find$props2.onChange,
+      valueComponent = _wrapper$find$props2.valueComponent,
+      passedSelectProps = _objectWithoutProperties(_wrapper$find$props2, ["styles", "menuPortalTarget", "onChange", "valueComponent"]);
     expect(passedSelectProps).toMatchInlineSnapshot("\nObject {\n  \"autoFocus\": undefined,\n  \"components\": Object {\n    \"ClearIndicator\": [Function],\n    \"MultiValueRemove\": [Function],\n  },\n  \"defaultInputValue\": \"\",\n  \"defaultMenuIsOpen\": false,\n  \"defaultValue\": null,\n  \"filterOption\": undefined,\n  \"formatOptionLabel\": undefined,\n  \"getOptionLabel\": undefined,\n  \"getOptionValue\": undefined,\n  \"inputValue\": undefined,\n  \"isClearable\": true,\n  \"isDisabled\": true,\n  \"isLoading\": false,\n  \"isMulti\": true,\n  \"isSearchable\": undefined,\n  \"menuIsOpen\": undefined,\n  \"menuPlacement\": \"auto\",\n  \"onInputChange\": undefined,\n  \"options\": Array [\n    Object {\n      \"label\": \"ovenlike\",\n      \"value\": \"ovenlike\",\n    },\n  ],\n  \"placeholder\": \"Select an option\",\n  \"value\": Object {\n    \"label\": \"ovenlike\",\n    \"value\": \"ovenlike\",\n  },\n}\n");
     expect(passedStyledProps).toEqual({
       hasError: hasError,

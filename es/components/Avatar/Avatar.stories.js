@@ -1,6 +1,6 @@
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
 /* eslint-disable no-alert */
+
 import React from 'react';
 import { Avatar, Row, Column } from '../../';
 export default {

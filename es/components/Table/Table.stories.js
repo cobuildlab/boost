@@ -9,12 +9,10 @@ import _regeneratorRuntime from "@babel/runtime/regenerator";
 import _asyncToGenerator from "@babel/runtime/helpers/esm/asyncToGenerator";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import { jsx as ___EmotionJSX } from "@emotion/core";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 /* eslint-disable no-alert */
+
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Table, TableBuilder, Link, Dropdown, Icon, Column, Text, Menu, Button, Row } from '../../';
 var TABLE_COLUMNS = [{
@@ -318,13 +316,8 @@ var GROUPED_TABLE_DATA = [{
   lastName: 'Dalrymple',
   email: 'inadaptive@brucine.net'
 }];
-
-var fetchData =
-/*#__PURE__*/
-function () {
-  var _ref = _asyncToGenerator(
-  /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee(page, pageSize) {
+var fetchData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee(page, pageSize) {
     return _regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -335,10 +328,8 @@ function () {
                 return setTimeout(resolve, 5000);
               });
             }();
-
           case 2:
             return _context.abrupt("return", TABLE_DATA.slice((page - 1) * pageSize, page * pageSize));
-
           case 3:
           case "end":
             return _context.stop();
@@ -346,30 +337,21 @@ function () {
       }
     }, _callee);
   }));
-
   return function fetchData(_x, _x2) {
     return _ref.apply(this, arguments);
   };
 }();
-
-var TableState =
-/*#__PURE__*/
-function (_React$Component) {
+var TableState = /*#__PURE__*/function (_React$Component) {
   _inherits(TableState, _React$Component);
-
   function TableState(props) {
     var _this;
-
     _classCallCheck(this, TableState);
-
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TableState).call(this, props));
-
     _this.setTableState = function (tableState) {
       _this.setState({
         tableState: tableState
       });
     };
-
     _this.state = {
       tableState: {
         pagination: {
@@ -383,13 +365,10 @@ function (_React$Component) {
     };
     return _this;
   }
-
   _createClass(TableState, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee2() {
+      var _componentDidMount = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee2() {
         var tableState, data;
         return _regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
@@ -399,11 +378,9 @@ function (_React$Component) {
                   _context2.next = 8;
                   break;
                 }
-
                 tableState = this.state.tableState;
                 _context2.next = 4;
                 return fetchData(tableState.pagination.page, tableState.pagination.pageSize);
-
               case 4:
                 data = _context2.sent;
                 this.setState(function (_ref2) {
@@ -420,14 +397,12 @@ function (_React$Component) {
                 });
                 _context2.next = 9;
                 break;
-
               case 8:
                 this.setState(function () {
                   return {
                     data: TABLE_DATA
                   };
                 });
-
               case 9:
               case "end":
                 return _context2.stop();
@@ -435,32 +410,25 @@ function (_React$Component) {
           }
         }, _callee2, this);
       }));
-
       function componentDidMount() {
         return _componentDidMount.apply(this, arguments);
       }
-
       return componentDidMount;
     }()
   }, {
     key: "componentDidUpdate",
     value: function () {
-      var _componentDidUpdate = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee3(prevProps, _ref3) {
+      var _componentDidUpdate = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee3(prevProps, _ref3) {
         var tableState, _tableState, data;
-
         return _regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 tableState = _ref3.tableState;
-
                 if (!(this.props.async && (this.state.tableState.pagination.page !== tableState.pagination.page || this.state.tableState.pagination.pageSize !== tableState.pagination.pageSize))) {
                   _context3.next = 8;
                   break;
                 }
-
                 this.setState(function () {
                   return {
                     loading: true
@@ -469,7 +437,6 @@ function (_React$Component) {
                 _tableState = this.state.tableState;
                 _context3.next = 6;
                 return fetchData(_tableState.pagination.page, _tableState.pagination.pageSize);
-
               case 6:
                 data = _context3.sent;
                 this.setState(function (_ref4) {
@@ -484,7 +451,6 @@ function (_React$Component) {
                     })
                   };
                 });
-
               case 8:
               case "end":
                 return _context3.stop();
@@ -492,11 +458,9 @@ function (_React$Component) {
           }
         }, _callee3, this);
       }));
-
       function componentDidUpdate(_x3, _x4) {
         return _componentDidUpdate.apply(this, arguments);
       }
-
       return componentDidUpdate;
     }()
   }, {
@@ -504,9 +468,9 @@ function (_React$Component) {
     value: function render() {
       var children = this.props.children;
       var _this$state = this.state,
-          tableState = _this$state.tableState,
-          loading = _this$state.loading,
-          data = _this$state.data;
+        tableState = _this$state.tableState,
+        loading = _this$state.loading,
+        data = _this$state.data;
       return children({
         tableState: tableState,
         setTableState: this.setTableState,
@@ -515,10 +479,8 @@ function (_React$Component) {
       });
     }
   }]);
-
   return TableState;
 }(React.Component);
-
 export default {
   title: 'Components/Table',
   component: Table
@@ -574,7 +536,6 @@ export var grouped = function grouped() {
         if (!acc[item.group]) {
           return _objectSpread({}, acc, _defineProperty({}, item.group, [item]));
         }
-
         acc[item.group] = [].concat(_toConsumableArray(acc[item.group]), [item]);
         return acc;
       }, {});
@@ -686,7 +647,7 @@ export var withSort = function withSort() {
     }
   }, ___EmotionJSX(TableState, null, function (_ref5) {
     var tableState = _ref5.tableState,
-        setTableState = _ref5.setTableState;
+      setTableState = _ref5.setTableState;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: TABLE_DATA,
@@ -711,7 +672,7 @@ export var withSelectionStory = function withSelectionStory() {
     }
   }, ___EmotionJSX(TableState, null, function (_ref6) {
     var tableState = _ref6.tableState,
-        setTableState = _ref6.setTableState;
+      setTableState = _ref6.setTableState;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: TABLE_DATA,
@@ -738,9 +699,9 @@ export var withPaginationStory = function withPaginationStory() {
     async: true
   }, function (_ref7) {
     var tableState = _ref7.tableState,
-        setTableState = _ref7.setTableState,
-        loading = _ref7.loading,
-        data = _ref7.data;
+      setTableState = _ref7.setTableState,
+      loading = _ref7.loading,
+      data = _ref7.data;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: data,
@@ -767,7 +728,7 @@ export var withCondensedModifier = function withCondensedModifier() {
     }
   }, ___EmotionJSX(TableState, null, function (_ref8) {
     var tableState = _ref8.tableState,
-        setTableState = _ref8.setTableState;
+      setTableState = _ref8.setTableState;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: TABLE_DATA,
@@ -792,7 +753,7 @@ export var withBorderedModifier = function withBorderedModifier() {
     }
   }, ___EmotionJSX(TableState, null, function (_ref9) {
     var tableState = _ref9.tableState,
-        setTableState = _ref9.setTableState;
+      setTableState = _ref9.setTableState;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: TABLE_DATA,
@@ -817,7 +778,7 @@ export var withCustomNoDataComponent = function withCustomNoDataComponent() {
     }
   }, ___EmotionJSX(TableState, null, function (_ref10) {
     var tableState = _ref10.tableState,
-        setTableState = _ref10.setTableState;
+      setTableState = _ref10.setTableState;
     return ___EmotionJSX(TableBuilder, {
       columns: TABLE_COLUMNS,
       data: [],
@@ -846,8 +807,7 @@ export var WithExpandableRows = function WithExpandableRows() {
   var renderCell = useCallback(function (_ref11, rowData, _ref12) {
     var columnName = _ref11.name;
     var expandRow = _ref12.expandRow,
-        isExpanded = _ref12.isExpanded;
-
+      isExpanded = _ref12.isExpanded;
     if (columnName === 'id') {
       return ___EmotionJSX(Button, {
         "data-testid": "expand-row-".concat(rowData[columnName]),
@@ -861,7 +821,6 @@ export var WithExpandableRows = function WithExpandableRows() {
         size: "sm"
       }), ___EmotionJSX("span", null, rowData[columnName]));
     }
-
     return rowData[columnName];
   }, []);
   return ___EmotionJSX("div", {
@@ -874,7 +833,8 @@ export var WithExpandableRows = function WithExpandableRows() {
     data: TABLE_DATA,
     expandedRowRender: function expandedRowRender(_ref13) {
       var rowData = _ref13.rowData;
-      return (// It will be rendered in <TableBodyRow /> that has the same `grid-template-columns` as any other row in the table
+      return (
+        // It will be rendered in <TableBodyRow /> that has the same `grid-template-columns` as any other row in the table
         // So in order to occupy the whole width you can use `grid-column` for that
         ___EmotionJSX(Table.BodyCell, {
           style: {
@@ -891,13 +851,11 @@ export var WithExpandableRows = function WithExpandableRows() {
 WithExpandableRows.story = {
   name: 'with expandable rows'
 };
-
 var LoadableComponent = function LoadableComponent() {
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      loading = _useState2[0],
-      setLoading = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    loading = _useState2[0],
+    setLoading = _useState2[1];
   useEffect(function () {
     setTimeout(function () {
       return setLoading(false);
@@ -905,13 +863,11 @@ var LoadableComponent = function LoadableComponent() {
   }, []);
   return loading ? ___EmotionJSX("div", null, "Loading...") : ___EmotionJSX("div", null, "Loaded");
 };
-
 export var WithControlledExpandableRows = function WithControlledExpandableRows() {
   var _useState3 = useState([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      expandedRowKeys = _useState4[0],
-      setExpandedRowKeys = _useState4[1];
-
+    _useState4 = _slicedToArray(_useState3, 2),
+    expandedRowKeys = _useState4[0],
+    setExpandedRowKeys = _useState4[1];
   var ids = useMemo(function () {
     return TABLE_DATA.map(function (_ref14) {
       var id = _ref14.id;
@@ -921,8 +877,7 @@ export var WithControlledExpandableRows = function WithControlledExpandableRows(
   var renderCell = useCallback(function (_ref15, rowData, _ref16) {
     var columnName = _ref15.name;
     var expandRow = _ref16.expandRow,
-        isExpanded = _ref16.isExpanded;
-
+      isExpanded = _ref16.isExpanded;
     if (columnName === 'id') {
       return ___EmotionJSX(Button, {
         variant: "link",
@@ -935,7 +890,6 @@ export var WithControlledExpandableRows = function WithControlledExpandableRows(
         size: "sm"
       }), ___EmotionJSX("span", null, rowData[columnName]));
     }
-
     return rowData[columnName];
   }, []);
   var expandedRowRender = useCallback(function (_ref17) {
@@ -973,7 +927,7 @@ export var WithControlledExpandableRows = function WithControlledExpandableRows(
     renderCell: renderCell,
     onExpand: function onExpand(_ref18) {
       var key = _ref18.key,
-          isExpanded = _ref18.isExpanded;
+        isExpanded = _ref18.isExpanded;
       return setExpandedRowKeys(function (s) {
         return isExpanded ? [].concat(_toConsumableArray(s), [key]) : s.filter(function (el) {
           return el !== key;

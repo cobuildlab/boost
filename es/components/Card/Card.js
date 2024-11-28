@@ -12,35 +12,26 @@ import { CardBody } from './CardBody';
 import { CardSection } from './CardSection';
 import { CardFooter } from './CardFooter';
 import { Paper } from '../Paper';
-
-var Card =
-/*#__PURE__*/
-function (_PureComponent) {
+var Card = /*#__PURE__*/function (_PureComponent) {
   _inherits(Card, _PureComponent);
-
   function Card() {
     _classCallCheck(this, Card);
-
     return _possibleConstructorReturn(this, _getPrototypeOf(Card).apply(this, arguments));
   }
-
   _createClass(Card, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          children = _this$props.children,
-          paddingOuter = _this$props.paddingOuter,
-          rest = _objectWithoutProperties(_this$props, ["children", "paddingOuter"]);
-
+        children = _this$props.children,
+        paddingOuter = _this$props.paddingOuter,
+        rest = _objectWithoutProperties(_this$props, ["children", "paddingOuter"]);
       return ___EmotionJSX(Paper, _extends({}, rest, {
         padding: paddingOuter
       }), typeof children === 'function' ? children(rest) : children);
     }
   }]);
-
   return Card;
 }(PureComponent);
-
 Card.Header = CardHeader;
 Card.Body = CardBody;
 Card.Section = CardSection;
