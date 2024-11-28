@@ -29,8 +29,8 @@
     "commit": "git-cz"
   },
   "peerDependencies": {
-    "@emotion/core": "^10",
-    "@emotion/styled": "^10",
+    "@emotion/core": "^10.3.1",
+    "@emotion/styled": "^10.3.0",
     "react": "^16.8",
     "react-dom": "^16.8"
   },
@@ -83,8 +83,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@emotion/core": "^10.0.16",
-    "@emotion/styled": "^10.0.15",
+    "@emotion/core": "^10.3.1",
+    "@emotion/styled": "^10.3.0",
     "color": "^3.0.0",
     "deepmerge": "^3.0.0",
     "emotion-theming": "^10.0.14",
