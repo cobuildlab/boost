@@ -78,8 +78,7 @@ const createStyledTag = (themeName: string) => {
 };
 
 
-const createThemeTag = (themeName: string, theme?: Object | (ThemeConstatns) => Object = {}) => { //Function | { root?: Object, modifiers?: Object, defaults?: Object } = {}) => {
-
+const createThemeTag = (themeName: string, theme: Object | (ThemeConstatns) => Object = {}) => { //Function | { root?: Object, modifiers?: Object, defaults?: Object } = {}) => {
   return [
     createStyledTag(themeName),
     createComponentTheme(themeName, theme),

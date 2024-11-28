@@ -1,6 +1,6 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
-import _styled from "@emotion/styled-base";
+import _styled from "@emotion/styled/base";
 import _getOr from "lodash/fp/getOr";
 import _omit from "lodash/fp/omit";
 import _get from "lodash/fp/get";
