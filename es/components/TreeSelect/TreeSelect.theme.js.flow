@@ -41,7 +41,7 @@ const [_, treeSelectTheme] = createThemeTag(name, ({ COLORS, SIZES, FONTS }: *) 
         },
 
         '&:after': {
-          content: '\'3\' !important',
+          content: '"33" !important',
           display: 'inline-block',
           borderRight: '2px solid hsl(0,0%,80%)',
           borderBottom: '2px solid hsl(0,0%,80%)',

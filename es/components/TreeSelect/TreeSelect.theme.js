@@ -44,7 +44,7 @@ var _createThemeTag3 = createThemeTag(name, function (_ref) {
               borderColor: "".concat(COLORS.PRIMARY, " !important")
             },
             '&:after': {
-              content: '\'3\' !important',
+              content: '"33" !important',
               display: 'inline-block',
               borderRight: '2px solid hsl(0,0%,80%)',
               borderBottom: '2px solid hsl(0,0%,80%)',
