@@ -83,6 +83,7 @@
     "sb": "^5.1.11"
   },
   "dependencies": {
+    "@babel/helper-environment-visitor": "^7.24.7",
     "@babel/runtime": "^7.5.5",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
